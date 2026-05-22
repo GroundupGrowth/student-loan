@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Brand palette */
+    --navy: #0f2a44;
+    --gold: #c8a26b;
+    --cream: #f8f5ee;
+    --ink: #1a1a1a;
+    --slate: #5c6b7a;
+    --line: #e5e0d5;
+
+    /* shadcn hsl tokens, mapped onto brand */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 10%;
+    --radius: 0.75rem;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background: #ffffff;
+    color: var(--ink);
+    font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-serif), Georgia, serif;
+    color: var(--navy);
+    letter-spacing: -0.01em;
+  }
+
+  h1 {
+    font-size: clamp(2.25rem, 4vw, 3.75rem);
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+    font-weight: 600;
+  }
+
+  h2 {
+    font-size: clamp(1.75rem, 3vw, 2.5rem);
+    line-height: 1.15;
+    font-weight: 600;
+  }
+
+  h3 {
+    font-size: clamp(1.25rem, 1.8vw, 1.5rem);
+    line-height: 1.25;
+    font-weight: 600;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  /* Always-visible, keyboard-friendly focus ring */
+  :focus-visible {
+    outline: 2px solid var(--navy);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  ::selection {
+    background: var(--navy);
+    color: #ffffff;
+  }
+}
+
+@layer components {
+  .section {
+    @apply py-14 md:py-24;
+  }
+
+  .container-content {
+    @apply container max-w-content;
+  }
+
+  .eyebrow {
+    @apply inline-block text-[13px] font-medium uppercase tracking-[0.18em] text-[var(--slate)];
+  }
+
+  .eyebrow-gold {
+    @apply inline-block text-[13px] font-medium uppercase tracking-[0.18em] text-[var(--gold)];
+  }
+
+  .text-body {
+    @apply text-[17px] leading-[1.65] text-[var(--ink)];
+  }
+
+  .text-meta {
+    @apply text-[14px] leading-[1.5] text-[var(--slate)];
+  }
+
+  .surface-cream {
+    background: var(--cream);
+  }
+
+  .surface-navy {
+    background: var(--navy);
+    color: #ffffff;
+  }
+
+  .surface-navy h1,
+  .surface-navy h2,
+  .surface-navy h3,
+  .surface-navy h4 {
+    color: #ffffff;
+  }
+
+  .card-base {
+    @apply rounded-xl border border-[var(--line)] bg-white p-6 transition-all duration-200;
+  }
+
+  .card-hover {
+    @apply hover:-translate-y-0.5 hover:shadow-[0_12px_28px_-18px_rgba(15,42,68,0.35)];
+  }
+
+  .underline-gold {
+    background-image: linear-gradient(var(--gold), var(--gold));
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size: 0 2px;
+    transition: background-size 0.2s ease-out;
+  }
+
+  .underline-gold:hover {
+    background-size: 100% 2px;
+  }
+}
+
+/* Subtle field styles consistent across forms */
+.field {
+  @apply w-full rounded-md border border-[var(--line)] bg-white px-3 py-2.5 text-[15px] text-[var(--ink)] placeholder:text-[var(--slate)] focus:border-[var(--navy)] focus:outline-none;
+}
+.field:focus {
+  box-shadow: 0 0 0 3px rgba(15, 42, 68, 0.18);
+}
