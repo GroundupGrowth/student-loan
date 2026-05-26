@@ -15,6 +15,8 @@ export type Service = {
     | "ShieldCheck"
     | "Landmark"
     | "Scale";
+  // Placeholder Unsplash image — replace with real photography before launch.
+  image: string;
   // Used on home page cards
   shortDescription: string;
   // Outcome-focused H1 for the service page
@@ -41,6 +43,8 @@ export const services: Service[] = [
     name: "Student Loan Relief",
     navLabel: "Student Loan Relief",
     icon: "GraduationCap",
+    image:
+      "https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=1600&q=70",
     shortDescription:
       "Lower your monthly payment, qualify for forgiveness programs, and stop guessing which plan is right.",
     outcomeHeadline: "Lower your student loan payment. Find your path to forgiveness.",
@@ -104,6 +108,8 @@ export const services: Service[] = [
     name: "Credit Wellness",
     navLabel: "Credit Wellness",
     icon: "ShieldCheck",
+    image:
+      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1600&q=70",
     shortDescription:
       "Remove inaccurate items, raise your score, and qualify for the rates everyone else seems to get.",
     outcomeHeadline: "Clean up your credit. Qualify for the rates you deserve.",
@@ -167,6 +173,8 @@ export const services: Service[] = [
     name: "Be Your Own Bank",
     navLabel: "Be Your Own Bank",
     icon: "Landmark",
+    image:
+      "https://images.unsplash.com/photo-1493612276216-ee3925520721?auto=format&fit=crop&w=1600&q=70",
     shortDescription:
       "Build a personal banking system you control, with cash value you can borrow against tax-free.",
     outcomeHeadline: "Become your own bank. Finance your own future.",
@@ -230,6 +238,8 @@ export const services: Service[] = [
     name: "Tax, Trust & Asset Protection",
     navLabel: "Tax, Trust & Asset Protection",
     icon: "Scale",
+    image:
+      "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1600&q=70",
     shortDescription:
       "Reduce your tax bill, protect what you've built, and pass it down on your terms.",
     outcomeHeadline: "Keep more of what you earn. Protect what you build.",

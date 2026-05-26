@@ -66,8 +66,10 @@ export default function AboutPage() {
               </div>
             </div>
             <PlaceholderImage
-              label="About hero — founder portrait or office scene. Warm, slightly desaturated."
+              label="ClearPath team in the firm's office, reviewing client plans"
               aspect="portrait"
+              priority
+              src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1200&h=1500&q=70"
             />
           </div>
         </div>

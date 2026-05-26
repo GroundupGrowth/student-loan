@@ -8,6 +8,7 @@ export function TeamCard({ member }: { member: TeamMember }) {
         initials={member.initials}
         size="lg"
         label={`Portrait of ${member.role} — replace before launch`}
+        src={member.photo}
       />
       <h3 className="mt-4 font-serif text-[18px] text-[var(--navy)]">
         {member.name}

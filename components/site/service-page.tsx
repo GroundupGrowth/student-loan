@@ -52,8 +52,10 @@ export function ServicePage({ service }: { service: Service }) {
             </div>
             <div>
               <PlaceholderImage
-                label={`${service.name} hero — replace with a real photo (consultation, document review, or relevant scene)`}
+                label={`Illustrative image for ${service.name}`}
                 aspect="landscape"
+                priority
+                src={service.image}
               />
             </div>
           </div>

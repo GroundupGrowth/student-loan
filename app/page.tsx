@@ -77,12 +77,16 @@ export default function HomePage() {
 
             <div className="lg:pl-6">
               {/*
-                Hero portrait placeholder. Swap with next/image:
-                <Image src="/hero-portrait.jpg" alt="Lead strategist at ClearPath" priority placeholder="blur" />
+                Placeholder hero portrait sourced from Unsplash. Replace with
+                real photography (e.g. lead strategist or consultation scene)
+                and remove the Unsplash entry from next.config.mjs before
+                launch.
               */}
               <PlaceholderImage
-                label="Hero portrait — professional headshot or consultation scene. Warm tones, slightly desaturated."
+                label="Lead strategist at ClearPath, reviewing client documents"
                 aspect="portrait"
+                priority
+                src="https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=1200&h=1500&q=70"
               />
             </div>
           </div>

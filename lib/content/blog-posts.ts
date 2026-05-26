@@ -5,6 +5,8 @@ export type BlogPost = {
   dateDisplay: string;
   author: string;
   excerpt: string;
+  // Placeholder Unsplash image — replace with real photography before launch.
+  image: string;
   // Real intro paragraphs in the brand voice, NOT lorem ipsum. The body field
   // is HTML so the [slug] page can dangerouslySetInnerHTML it. Production
   // content can later move to MDX without changing the route shape.
@@ -20,6 +22,8 @@ export const blogPosts: BlogPost[] = [
     author: "ClearPath Strategy Team",
     excerpt:
       "There are four federal income-driven repayment plans in play right now, and the math under each one is different. Here's how to actually tell which one fits your situation, without trusting the call center on the other end of the line.",
+    image:
+      "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=1600&q=70",
     body: `
       <p>If you have federal student loans and a pulse, you've probably been told to "switch to an income-driven plan" by at least one person at your loan servicer. The advice isn't wrong — it's just incomplete. There are four federal income-driven repayment plans in play right now, and the math under each one is different. Picking the wrong one can cost you tens of thousands over the life of your loan.</p>
       <p>This post walks through what each plan actually does in 2026, who it tends to be the best fit for, and the questions to ask before you sign anything. None of this is legal or tax advice; if you want a personalized recommendation, you can <a href="/book-a-consultation">book a free consultation</a> and we'll model the numbers with you.</p>
@@ -39,6 +43,8 @@ export const blogPosts: BlogPost[] = [
     author: "ClearPath Strategy Team",
     excerpt:
       "Most credit advice on the internet is either obvious or wrong. Here are the four moves that actually shift your score quickly, in the order we use them with clients — and two popular tactics you can skip.",
+    image:
+      "https://images.unsplash.com/photo-1554224154-26032ffc0d07?auto=format&fit=crop&w=1600&q=70",
     body: `
       <p>Most credit advice on the internet is either obvious ("pay your bills on time") or just wrong ("close old cards to look responsible"). After running credit cleanup for thousands of clients, we've found that four moves do most of the work, and a couple of popular tactics are a waste of time.</p>
       <h2>What actually moves a score quickly</h2>
@@ -63,6 +69,8 @@ export const blogPosts: BlogPost[] = [
     author: "ClearPath Strategy Team",
     excerpt:
       "Infinite Banking gets sold as a miracle and dismissed as a scam, and both takes miss the point. Here's a plain-English walk-through of what the strategy actually is, what it does well, and where it doesn't fit.",
+    image:
+      "https://images.unsplash.com/photo-1554224154-22dec7ec8818?auto=format&fit=crop&w=1600&q=70",
     body: `
       <p>Infinite Banking — sometimes called "Be Your Own Bank" or the Infinite Banking Concept (IBC) — gets sold as a miracle product and dismissed as a scam, often in the same week. Both takes miss the point. The strategy is older than most of the people pitching it, and it's neither magic nor fraud. It's a specific use of a specific kind of life insurance policy. Whether it fits you depends on your situation.</p>
       <h2>What it actually is</h2>

@@ -10,6 +10,7 @@ export function BlogCard({ post }: { post: BlogPost }) {
       <PlaceholderImage
         label={`Hero image for: ${post.title}`}
         aspect="landscape"
+        src={post.image}
         className="rounded-b-none border-0 border-b border-[var(--line)]"
       />
       <div className="flex flex-1 flex-col gap-3 p-6">

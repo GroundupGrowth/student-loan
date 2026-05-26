@@ -8,6 +8,16 @@ const nextConfig = {
   // static, GitHub Pages), add `output: 'export'` back AND set
   // `images.unoptimized = true`.
   reactStrictMode: true,
+  images: {
+    // Unsplash is used as a placeholder image host. Replace these with your
+    // own photography (and remove this remotePatterns entry) before launch.
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+      },
+    ],
+  },
 };
 
 export default nextConfig;

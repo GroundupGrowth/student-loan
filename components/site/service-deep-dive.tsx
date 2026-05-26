@@ -57,8 +57,9 @@ export function ServiceDeepDive({ service, imageOnRight = false, surface = "whit
 
           <div>
             <PlaceholderImage
-              label={`${service.name} — replace with a real photo (consultation scene, document review, or office context)`}
+              label={`Illustrative image for ${service.name}`}
               aspect="landscape"
+              src={service.image}
             />
           </div>
         </div>

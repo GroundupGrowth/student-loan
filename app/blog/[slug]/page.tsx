@@ -55,6 +55,8 @@ export default function BlogPostPage({ params }: { params: Params }) {
             <PlaceholderImage
               label={`Hero image for: ${post.title}`}
               aspect="landscape"
+              priority
+              src={post.image}
             />
           </div>
 
