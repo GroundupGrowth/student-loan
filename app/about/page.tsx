@@ -11,7 +11,7 @@ import { team } from "@/lib/content/team";
 export const metadata = {
   title: "About ClearPath",
   description:
-    "ClearPath is a U.S. debt-relief and personal-finance consulting firm. We help families lower student loan payments, clean up credit, build wealth, and protect what they build.",
+    "ClearPath is a U.S. federal student loan consulting firm. We pull your full loan record, model every program you qualify for, and handle the paperwork — so you stop guessing.",
 };
 
 const values = [
@@ -19,7 +19,7 @@ const values = [
     icon: Compass,
     title: "Plain English, every time",
     description:
-      "If a strategist can't explain a strategy to you without jargon, it's the wrong strategy. We translate the federal student loan rules, the tax code, and the insurance contract into the version that makes sense.",
+      "If a strategist can't explain a federal student loan program to you without jargon, it's the wrong explanation. We translate IDR, PSLF, Borrower's Defense, and discharge rules into the version that makes sense for your situation.",
   },
   {
     icon: BookOpen,
@@ -31,7 +31,7 @@ const values = [
     icon: Award,
     title: "Flat fees, no hidden cuts",
     description:
-      "Every engagement is quoted up front, in writing. No percentage-of-savings, no contingency tricks, no surprise add-ons.",
+      "Every engagement is quoted up front, in writing. No percentage-of-savings, no contingency tricks, no surprise add-ons, no charges for re-certification once you're a client.",
   },
 ];
 
@@ -45,13 +45,13 @@ export default function AboutPage() {
             <div>
               <span className="eyebrow">About ClearPath</span>
               <h1 className="mt-4 text-balance">
-                The firm your accountant wishes existed.
+                The federal student loan firm we wish existed.
               </h1>
               <p className="mt-5 max-w-xl font-serif text-[20px] leading-snug text-[var(--slate)]">
-                We sit between you and the federal student loan system, the
-                credit bureaus, the IRS, and the insurance industry — so you
-                only have to deal with one team to get a plan that actually
-                holds together.
+                We sit between you and the federal student loan system — your
+                servicer, NSLDS, the IDR forms, PSLF certification — so you
+                only deal with one team to get a plan that actually holds
+                together.
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-3">
                 <Button asChild size="lg">
@@ -94,17 +94,19 @@ export default function AboutPage() {
                 build?
               </p>
               <p>
-                After years of watching friends and family get pushed into the
-                wrong student loan plan, charged for credit fixes that never
-                showed up, and sold insurance products they didn&apos;t
-                understand, our founder built ClearPath as the firm they wished
-                they could refer people to.
+                After years of watching friends and family get pushed into
+                the wrong federal student loan plan, miscounted on PSLF, or
+                told nothing could be done when they actually had a
+                Borrower&apos;s Defense case, our founder built ClearPath as
+                the firm they wished they could refer people to.
               </p>
               <p>
-                The work is unglamorous: pulling records, modeling numbers,
-                filing paperwork, following up with servicers. But the outcome
-                — a lower payment, a higher score, a clear plan — is the kind
-                of thing that quietly changes a family&apos;s trajectory.
+                The work is unglamorous: pulling NSLDS records, modeling
+                numbers under every IDR plan, certifying employment, filing
+                discharge applications, following up with servicers. But the
+                outcome — a lower payment, a real timeline to forgiveness, a
+                plan that holds together — is the kind of thing that quietly
+                changes a family&apos;s trajectory.
               </p>
             </div>
           </div>
@@ -117,12 +119,12 @@ export default function AboutPage() {
           <div className="mx-auto max-w-3xl text-center">
             <span className="eyebrow">Mission</span>
             <h2 className="mt-3 text-balance">
-              Custom plans. Clear guidance. A stronger financial future.
+              Custom plans. Clear guidance. A real path out of student loan debt.
             </h2>
             <p className="mt-5 text-body text-[var(--slate)]">
-              We exist to give middle-class families and professionals access
-              to the kind of integrated financial guidance that used to be
-              reserved for high-net-worth clients — without the country-club
+              We exist to give federal student loan borrowers the same
+              quality of strategic guidance that high-fee financial advisors
+              reserve for high-net-worth clients — without the country-club
               membership.
             </p>
           </div>

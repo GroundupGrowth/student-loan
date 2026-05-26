@@ -2,27 +2,18 @@
 
 import * as React from "react";
 import Link from "next/link";
-import { Menu, Phone, X, ChevronDown } from "lucide-react";
+import { Menu, Phone, X } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { Sheet } from "@/components/ui/sheet";
-import {
-  NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuItem,
-  NavigationMenuLink,
-  NavigationMenuList,
-  NavigationMenuTrigger,
-  navigationMenuTriggerStyle,
-} from "@/components/ui/navigation-menu";
+import { navigationMenuTriggerStyle } from "@/components/ui/navigation-menu";
 import { cn } from "@/lib/utils";
 import { PHONE, PHONE_DISPLAY, SITE_SHORT_NAME } from "@/lib/config";
-import { services } from "@/lib/content/services";
 
 const navLinks: { href: string; label: string }[] = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
-  // Services is handled separately as a dropdown
+  { href: "/services/student-loan-relief", label: "How It Works" },
   { href: "/reviews", label: "Reviews" },
   { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" },
@@ -31,7 +22,6 @@ const navLinks: { href: string; label: string }[] = [
 export function Header() {
   const [scrolled, setScrolled] = React.useState(false);
   const [mobileOpen, setMobileOpen] = React.useState(false);
-  const [mobileServicesOpen, setMobileServicesOpen] = React.useState(false);
 
   React.useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -58,51 +48,15 @@ export function Header() {
 
         {/* Desktop nav */}
         <nav className="hidden lg:flex lg:items-center lg:gap-2" aria-label="Primary">
-          <Link href="/" className={cn(navigationMenuTriggerStyle(), "text-[15px]")}>
-            Home
-          </Link>
-          <Link href="/about" className={cn(navigationMenuTriggerStyle(), "text-[15px]")}>
-            About
-          </Link>
-
-          <NavigationMenu>
-            <NavigationMenuList>
-              <NavigationMenuItem>
-                <NavigationMenuTrigger>Services</NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <ul className="grid w-[420px] gap-1 p-3">
-                    {services.map((s) => (
-                      <li key={s.slug}>
-                        <NavigationMenuLink asChild>
-                          <Link
-                            href={`/services/${s.slug}`}
-                            className="block rounded-md p-3 transition-colors hover:bg-[var(--cream)]"
-                          >
-                            <div className="font-serif text-[16px] text-[var(--navy)]">
-                              {s.name}
-                            </div>
-                            <p className="mt-1 text-[13px] leading-snug text-[var(--slate)]">
-                              {s.shortDescription}
-                            </p>
-                          </Link>
-                        </NavigationMenuLink>
-                      </li>
-                    ))}
-                  </ul>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-            </NavigationMenuList>
-          </NavigationMenu>
-
-          <Link href="/reviews" className={cn(navigationMenuTriggerStyle(), "text-[15px]")}>
-            Reviews
-          </Link>
-          <Link href="/blog" className={cn(navigationMenuTriggerStyle(), "text-[15px]")}>
-            Blog
-          </Link>
-          <Link href="/contact" className={cn(navigationMenuTriggerStyle(), "text-[15px]")}>
-            Contact
-          </Link>
+          {navLinks.map((l) => (
+            <Link
+              key={l.href}
+              href={l.href}
+              className={cn(navigationMenuTriggerStyle(), "text-[15px]")}
+            >
+              {l.label}
+            </Link>
+          ))}
         </nav>
 
         {/* Desktop CTAs */}
@@ -157,50 +111,7 @@ export function Header() {
 
           <nav className="flex-1 overflow-y-auto px-5 py-4" aria-label="Mobile">
             <ul className="space-y-1">
-              {navLinks.slice(0, 2).map((l) => (
-                <li key={l.href}>
-                  <Link
-                    href={l.href}
-                    onClick={() => setMobileOpen(false)}
-                    className="block rounded-md px-3 py-3 text-[16px] font-medium text-[var(--ink)] hover:bg-[var(--cream)]"
-                  >
-                    {l.label}
-                  </Link>
-                </li>
-              ))}
-              <li>
-                <button
-                  type="button"
-                  onClick={() => setMobileServicesOpen((s) => !s)}
-                  aria-expanded={mobileServicesOpen}
-                  className="flex w-full items-center justify-between rounded-md px-3 py-3 text-left text-[16px] font-medium text-[var(--ink)] hover:bg-[var(--cream)]"
-                >
-                  Services
-                  <ChevronDown
-                    className={cn(
-                      "h-4 w-4 transition-transform",
-                      mobileServicesOpen && "rotate-180",
-                    )}
-                    aria-hidden="true"
-                  />
-                </button>
-                {mobileServicesOpen && (
-                  <ul className="mt-1 space-y-1 pl-3">
-                    {services.map((s) => (
-                      <li key={s.slug}>
-                        <Link
-                          href={`/services/${s.slug}`}
-                          onClick={() => setMobileOpen(false)}
-                          className="block rounded-md px-3 py-2 text-[15px] text-[var(--slate)] hover:bg-[var(--cream)] hover:text-[var(--navy)]"
-                        >
-                          {s.name}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </li>
-              {navLinks.slice(2).map((l) => (
+              {navLinks.map((l) => (
                 <li key={l.href}>
                   <Link
                     href={l.href}

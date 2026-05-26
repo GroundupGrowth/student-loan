@@ -3,44 +3,70 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { BlogCard } from "@/components/site/blog-card";
 import { CtaBand } from "@/components/site/cta-band";
-import { ServiceCard } from "@/components/site/service-card";
 import { ServiceDeepDive } from "@/components/site/service-deep-dive";
 import { StatsStrip } from "@/components/site/stats-strip";
 import { TeamCard } from "@/components/site/team-card";
 import { TestimonialCarousel } from "@/components/site/testimonial-carousel";
 import { TrustBar } from "@/components/site/trust-bar";
 import { VslPlaceholder } from "@/components/site/vsl-placeholder";
-import { ShieldCheck, Users, FileCheck } from "lucide-react";
+import {
+  Database,
+  FileCheck,
+  GraduationCap,
+  ShieldCheck,
+  Users,
+} from "lucide-react";
 
 import { blogPosts } from "@/lib/content/blog-posts";
-import { services } from "@/lib/content/services";
+import { studentLoanService } from "@/lib/content/services";
 import { team } from "@/lib/content/team";
 import { testimonials } from "@/lib/content/testimonials";
 
 export const metadata = {
-  title: "Custom plans. Clear guidance. A stronger financial future.",
+  title: "Federal student loans, finally explained.",
   description:
-    "Lower your student loan payment, clean up your credit, build wealth on your terms, and protect what you build. Book a free 30-minute consultation with a licensed strategist.",
+    "A licensed strategist reviews your federal student loans, models every repayment plan you qualify for, and handles the paperwork. No call centers. No scripts. No pressure.",
 };
+
+const whatWeHandle = [
+  {
+    icon: Database,
+    title: "We pull your full federal loan record",
+    description:
+      "Every loan, every servicer, the whole NSLDS picture. No guessing about what you owe to whom or which rules apply to which balance.",
+  },
+  {
+    icon: GraduationCap,
+    title: "We model every program you qualify for",
+    description:
+      "IDR plans, PSLF, Borrower's Defense, Disability Discharge — your real numbers, side by side, with the tradeoffs in plain English.",
+  },
+  {
+    icon: FileCheck,
+    title: "We file the paperwork and track it",
+    description:
+      "Forms drafted, submitted, followed up. Annual re-certification handled on your behalf. One strategist, not a call-center queue.",
+  },
+];
 
 const whyChoose = [
   {
     icon: Users,
-    title: "20 Years of Combined Experience",
+    title: "Strategists, not call-center reps",
     description:
-      "Our strategists have spent careers inside the federal student loan system, credit reporting, and high-net-worth planning. You get all of it on one team.",
+      "Your case is handled by a licensed strategist who knows the federal student loan rulebook cold. The person you meet on your consultation is the person who runs your plan.",
   },
   {
     icon: FileCheck,
-    title: "Personalized Strategy, Not Scripts",
+    title: "Your numbers, your plan",
     description:
-      "Every plan starts with your numbers — loans, credit reports, income, goals. We don't recommend anything we wouldn't put our own family in.",
+      "Every plan starts with your real NSLDS record, your income, and your family situation. We don't recommend anything we wouldn't put our own family in.",
   },
   {
     icon: ShieldCheck,
-    title: "Licensed, Transparent, No Hidden Fees",
+    title: "Flat fees, no hidden cuts",
     description:
-      "Flat fees quoted up front, no percentage-of-savings tricks, no surprise charges. If a service doesn't fit you, we'll say so on the call.",
+      "Flat fee quoted up front on your free consultation. No percentage-of-savings tricks, no surprise charges, no charges for re-certification once you're a client.",
   },
 ];
 
@@ -52,21 +78,22 @@ export default function HomePage() {
         <div className="container max-w-content">
           <div className="grid items-center gap-10 md:gap-12 lg:grid-cols-[1.05fr_1fr]">
             <div>
-              <span className="eyebrow">Debt relief & financial strategy</span>
+              <span className="eyebrow">Federal student loan strategy</span>
               <h1 className="mt-4 text-balance">
-                Get out of debt. Build real wealth. Sleep better.
+                Lower your payment. Get a real plan. Sleep better.
               </h1>
               <p className="mt-5 max-w-xl font-serif text-[20px] leading-snug text-[var(--slate)] md:text-[22px]">
-                A licensed strategist reviews your student loans, credit, and
-                long-term plan — then walks you through every option in plain
-                English. No scripts. No pressure.
+                A licensed strategist reviews your federal student loans,
+                models every repayment plan you qualify for, and walks you
+                through your options in plain English. No call centers. No
+                scripts. No pressure.
               </p>
               <div className="mt-8 flex flex-wrap items-center gap-3">
                 <Button asChild size="lg">
                   <Link href="/book-a-consultation">Book Free Consultation</Link>
                 </Button>
                 <Button asChild variant="secondary" size="lg">
-                  <Link href="/about">Learn More</Link>
+                  <Link href="/services/student-loan-relief">See how it works</Link>
                 </Button>
               </div>
               <p className="mt-6 max-w-md text-[14px] text-[var(--slate)]">
@@ -91,37 +118,47 @@ export default function HomePage() {
       {/* 2. Trust bar */}
       <TrustBar />
 
-      {/* 3. Services overview */}
-      <section id="services" className="section">
+      {/* 3. What we handle (replaces the old 4-card services overview) */}
+      <section id="what-we-handle" className="section">
         <div className="container max-w-content">
           <div className="mx-auto max-w-3xl text-center">
-            <span className="eyebrow">Services</span>
+            <span className="eyebrow">What we do</span>
             <h2 className="mt-3 text-balance">
-              Solve every financial problem under one roof.
+              We handle the paperwork. You get the lower payment.
             </h2>
             <p className="mt-4 text-body text-[var(--slate)]">
-              Four practices, one team. Most clients start in one area and add
-              another within the first year — because every part of your
-              financial life touches the others.
+              We do one thing — federal student loans — and we do it
+              thoroughly. Here&apos;s the three-part service you get on every
+              engagement.
             </p>
           </div>
-          <div className="mt-12 grid gap-5 sm:grid-cols-2">
-            {services.map((s) => (
-              <ServiceCard key={s.slug} service={s} />
-            ))}
+          <div className="mt-12 grid gap-5 md:grid-cols-3">
+            {whatWeHandle.map((item) => {
+              const Icon = item.icon;
+              return (
+                <div key={item.title} className="card-base h-full p-7">
+                  <span className="inline-flex h-11 w-11 items-center justify-center rounded-lg border border-[var(--line)] bg-[var(--cream)]">
+                    <Icon
+                      className="h-5 w-5 text-[var(--navy)]"
+                      strokeWidth={1.5}
+                      aria-hidden="true"
+                    />
+                  </span>
+                  <h3 className="mt-5 font-serif text-[20px] text-[var(--navy)]">
+                    {item.title}
+                  </h3>
+                  <p className="mt-3 text-[15px] leading-relaxed text-[var(--slate)]">
+                    {item.description}
+                  </p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
 
-      {/* 4. Service deep-dives — alternating */}
-      {services.map((s, i) => (
-        <ServiceDeepDive
-          key={s.slug}
-          service={s}
-          imageOnRight={i % 2 === 0}
-          surface={i % 2 === 0 ? "white" : "cream"}
-        />
-      ))}
+      {/* 4. Service deep-dive — single rich section for the student loan service */}
+      <ServiceDeepDive service={studentLoanService} imageOnRight={true} surface="cream" />
 
       {/* 5. Meet the Team */}
       <section className="section">
@@ -150,7 +187,7 @@ export default function HomePage() {
           <div className="mx-auto max-w-3xl text-center">
             <span className="eyebrow">Why ClearPath</span>
             <h2 className="mt-3 text-balance">
-              Why families and professionals trust ClearPath.
+              Why borrowers trust ClearPath with their federal student loans.
             </h2>
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-3">
@@ -230,7 +267,10 @@ export default function HomePage() {
       </section>
 
       {/* 10. Final CTA band */}
-      <CtaBand />
+      <CtaBand
+        heading="Ready for a real student loan plan?"
+        subheading="Book a free 30-minute consultation. We&rsquo;ll pull your federal loan record, model the math, and tell you the next step — whether you hire us or not."
+      />
     </>
   );
 }

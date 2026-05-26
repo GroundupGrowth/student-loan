@@ -14,7 +14,13 @@ import {
   SITE_SHORT_NAME,
   STATS,
 } from "@/lib/config";
-import { services } from "@/lib/content/services";
+
+const exploreLinks = [
+  { href: "/services/student-loan-relief", label: "How It Works" },
+  { href: "/reviews", label: "Reviews" },
+  { href: "/blog", label: "Blog" },
+  { href: "/book-a-consultation", label: "Book a Consultation" },
+];
 
 const usefulLinks = [
   { href: "/about", label: "About" },
@@ -53,8 +59,9 @@ export function Footer() {
               {SITE_SHORT_NAME}
             </Link>
             <p className="mt-3 text-[14px] leading-relaxed text-[var(--slate)]">
-              Debt relief and personal-finance consulting for U.S. households
-              who want a real plan, not a sales pitch.
+              Federal student loan consulting for U.S. borrowers. We pull
+              your full loan picture, model every program you qualify for,
+              and handle the paperwork.
             </p>
             <div className="mt-6">
               <p className="mb-2 text-[13px] font-medium uppercase tracking-[0.16em] text-[var(--slate)]">
@@ -64,19 +71,16 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Services */}
+          {/* Explore */}
           <div>
             <h3 className="text-[13px] font-medium uppercase tracking-[0.16em] text-[var(--slate)]">
-              Services
+              Explore
             </h3>
             <ul className="mt-4 space-y-2 text-[15px]">
-              {services.map((s) => (
-                <li key={s.slug}>
-                  <Link
-                    href={`/services/${s.slug}`}
-                    className="text-[var(--ink)] underline-gold"
-                  >
-                    {s.name}
+              {exploreLinks.map((l) => (
+                <li key={l.href}>
+                  <Link href={l.href} className="text-[var(--ink)] underline-gold">
+                    {l.label}
                   </Link>
                 </li>
               ))}

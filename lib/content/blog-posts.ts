@@ -36,51 +36,49 @@ export const blogPosts: BlogPost[] = [
     `,
   },
   {
-    slug: "fastest-ways-to-raise-your-credit-score",
-    title: "The 4 fastest ways to raise your credit score (and the 2 that don't work)",
+    slug: "pslf-in-2026-who-actually-qualifies",
+    title: "PSLF in 2026: who actually qualifies, and how to count your payments",
     date: "2026-03-14",
     dateDisplay: "March 14, 2026",
     author: "ClearPath Strategy Team",
     excerpt:
-      "Most credit advice on the internet is either obvious or wrong. Here are the four moves that actually shift your score quickly, in the order we use them with clients — and two popular tactics you can skip.",
+      "Public Service Loan Forgiveness is the most valuable program federal borrowers have access to — and the most misunderstood. Here's who actually qualifies, how the 120-payment count really works, and the three mistakes that delay people by years.",
     image:
-      "https://images.unsplash.com/photo-1554224154-26032ffc0d07?auto=format&fit=crop&w=1600&q=70",
+      "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=70",
     body: `
-      <p>Most credit advice on the internet is either obvious ("pay your bills on time") or just wrong ("close old cards to look responsible"). After running credit cleanup for thousands of clients, we've found that four moves do most of the work, and a couple of popular tactics are a waste of time.</p>
-      <h2>What actually moves a score quickly</h2>
-      <h3>1. Drop your utilization on revolving accounts</h3>
-      <p>Credit utilization — what percentage of your available credit you're using — is one of the largest scoring factors. Getting any single card under 30% utilization, and your overall under 10%, can move a score by 20–60 points within a single statement cycle. This is the single fastest legitimate move available.</p>
-      <h3>2. Dispute inaccurate items</h3>
-      <p>Federal law gives you the right to dispute anything you believe is inaccurate. The bureau has 30 days to investigate. If the furnisher can't verify the item, it has to come off. We routinely find 3–7 disputable items on a first review.</p>
-      <h3>3. Become an authorized user on a healthy account</h3>
-      <p>If you have a parent, spouse, or close family member with a long-running card in good standing, being added as an authorized user can import some of that history into your file. It's slow but reliable for thin-file clients.</p>
-      <h3>4. Pay down recent balances before the statement closes</h3>
-      <p>Your score reflects the balance reported on your statement date, not your due date. Paying before the statement closes lowers the reported balance and lowers utilization without changing anything else.</p>
-      <h2>Two things people try that don't work</h2>
-      <p>Closing old credit cards "to look more responsible." This usually raises your utilization (less available credit) and shortens your average account age. It almost always lowers the score.</p>
-      <p>Paying for a "credit booster" subscription that just reports your rent or utilities. These can help a thin file get a score at all, but for an established file the effect is minor and usually not worth the monthly fee.</p>
+      <p>Public Service Loan Forgiveness (PSLF) forgives the remaining balance on your Direct Loans after 120 qualifying monthly payments, as long as you've been working full-time for a qualifying employer the whole time. On paper that's clear. In practice, almost every borrower we talk to has at least one misunderstanding that's costing them months — sometimes years — of credit.</p>
+      <h2>Who qualifies (and who doesn't)</h2>
+      <p>You qualify if you work full-time for a U.S. federal, state, local, or tribal government agency, or for most 501(c)(3) nonprofits. Teachers in public schools, nurses in public hospitals, attorneys in legal aid, and most government employees qualify. Independent contractors usually do not. Religious work counts as long as the employer is a qualifying 501(c)(3) — the post-2021 rules clarified this.</p>
+      <h2>How the 120-payment count really works</h2>
+      <p>A "qualifying payment" is a payment made on a Direct Loan, on an income-driven repayment plan or the 10-year Standard plan, while you were employed full-time by a qualifying employer. Each calendar month with a payment counts as one. You don't have to make 120 consecutive payments. Months without a payment (forbearance, deferment, or just gaps) don't count — with a handful of narrow exceptions.</p>
+      <h2>Three mistakes that delay people by years</h2>
+      <p>First: never certifying employment until you think you're at 120. The certification process recovers past months, but only ones you can document — and documentation gets harder as years pass. Certify yearly, every year.</p>
+      <p>Second: leaving FFEL or Perkins loans unconsolidated. Only Direct Loans count toward PSLF. If your loans are FFEL or Perkins, you need to consolidate to Direct first — and the months before consolidation are usually lost.</p>
+      <p>Third: assuming any income-driven plan works. Some don't. Make sure your plan is one of the four qualifying ones (and that your loan types are eligible for that plan) before you spend a year paying on the wrong one.</p>
+      <h2>What to do this week</h2>
+      <p>Pull your <code>StudentAid.gov</code> account, look at your loan types, and submit a PSLF employment certification for every qualifying employer you've had since 2007. That single action recovers more PSLF credit for clients than anything else we do.</p>
     `,
   },
   {
-    slug: "be-your-own-bank-what-infinite-banking-is-and-isnt",
-    title: "Be Your Own Bank: what 'Infinite Banking' is, and what it isn't",
+    slug: "borrowers-defense-when-you-have-a-shot",
+    title: "Borrower's Defense: when you have a shot at full discharge, and when you don't",
     date: "2026-02-05",
     dateDisplay: "February 5, 2026",
     author: "ClearPath Strategy Team",
     excerpt:
-      "Infinite Banking gets sold as a miracle and dismissed as a scam, and both takes miss the point. Here's a plain-English walk-through of what the strategy actually is, what it does well, and where it doesn't fit.",
+      "Borrower's Defense to Repayment can discharge your entire federal student loan balance if your school misled you. It's also the most misunderstood program in federal student aid. Here's a plain-English read on who actually has a shot.",
     image:
-      "https://images.unsplash.com/photo-1554224154-22dec7ec8818?auto=format&fit=crop&w=1600&q=70",
+      "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1600&q=70",
     body: `
-      <p>Infinite Banking — sometimes called "Be Your Own Bank" or the Infinite Banking Concept (IBC) — gets sold as a miracle product and dismissed as a scam, often in the same week. Both takes miss the point. The strategy is older than most of the people pitching it, and it's neither magic nor fraud. It's a specific use of a specific kind of life insurance policy. Whether it fits you depends on your situation.</p>
-      <h2>What it actually is</h2>
-      <p>You buy a dividend-paying whole life insurance policy from a mutually-owned carrier. The policy is designed (deliberately, with extra paid-up additions) to grow cash value efficiently. Once cash value is built up, you can borrow against the policy at any age, for any reason, without a credit check. While the loan is out, the underlying cash value keeps earning. You pay yourself back on your own schedule.</p>
-      <h2>What it does well</h2>
-      <p>Three things, mostly. First, it builds a pool of tax-deferred capital that you can access tax-free through loans. Second, it lets you recapture interest you'd otherwise pay to banks, lenders, and credit card companies — when you buy a car with a policy loan, the interest is going back into a system you own. Third, it transfers a death benefit to your heirs income-tax-free.</p>
-      <h2>Where it doesn't fit</h2>
-      <p>If you don't have steady cash flow you can commit to for years, it's the wrong tool. If you're behind on retirement contributions and haven't filled your 401(k) match or your Roth IRA, fill those first. If you're being told a policy will return 8–10% annually, you're being misled — that's a conflation of dividend rates and net returns and it almost never holds up.</p>
-      <h2>The bottom line</h2>
-      <p>Used as a banking system for people with stable cash flow and a long time horizon, this strategy works. Used as a retirement-investment substitute, it underperforms. The right question isn't "is this good or bad," it's "is this the right tool for what I'm trying to do." That's the conversation we have on every consultation.</p>
+      <p>Borrower's Defense to Repayment (BDR) is the federal program that can discharge your entire federal student loan balance — and refund payments you've already made — if your school misled you in a way that affected your decision to enroll, pay, or take out loans. It's the most valuable single tool in federal student aid, and it's also the most misunderstood. Most people who could file don't, and most people who do file misunderstand what they're actually claiming.</p>
+      <h2>The standard, in plain English</h2>
+      <p>To win a Borrower's Defense claim, you generally need to show that your school (or someone acting on its behalf) made a substantial misrepresentation that you relied on, and that the misrepresentation caused you financial harm. The classic examples: a school promised a 95% job-placement rate that wasn't true, claimed credits would transfer when they wouldn't, lied about its accreditation, or guaranteed a certification it didn't actually deliver.</p>
+      <h2>When you have a shot</h2>
+      <p>You have a real shot if you attended a school that has been the subject of federal enforcement actions, state attorney general lawsuits, or class-action findings — there are dozens. You also have a shot even if your school hasn't been sued, as long as you can document the specific misrepresentation, when you encountered it, and how it affected your decision. Emails, marketing materials, recruiter conversations, and recorded calls are all evidence.</p>
+      <h2>When you don't</h2>
+      <p>Borrower's Defense is not "the school didn't deliver the education I expected." It's not "I didn't get a job." It's not "the program was harder than I thought." Disappointment isn't a claim. You need a concrete misrepresentation, made by the school, that you can describe specifically — and that affected your choice to enroll or pay.</p>
+      <h2>What to do if you might have a case</h2>
+      <p>First, write down everything you remember about how the school recruited you: ads, calls, in-person tours, promises made about credits, jobs, or accreditation. Date it as best you can. Second, search the school's name plus "Borrower's Defense" and "lawsuit" — class actions and state enforcement actions are public record. Third, talk to someone who's filed claims before. The forms are short; the strategy is everything.</p>
     `,
   },
 ];

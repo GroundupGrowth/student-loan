@@ -10,7 +10,7 @@
 export const SITE_NAME = "ClearPath Financial Freedom";
 export const SITE_SHORT_NAME = "ClearPath";
 export const SITE_TAGLINE =
-  "Custom plans. Clear guidance. A stronger financial future.";
+  "Federal student loans, finally explained.";
 
 // Contact — both raw (for tel:) and display formats.
 export const PHONE = "{{PHONE}}"; // e.g. "+1-555-555-5555"
