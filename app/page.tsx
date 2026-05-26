@@ -3,13 +3,13 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { BlogCard } from "@/components/site/blog-card";
 import { CtaBand } from "@/components/site/cta-band";
-import { PlaceholderImage } from "@/components/site/placeholder-image";
 import { ServiceCard } from "@/components/site/service-card";
 import { ServiceDeepDive } from "@/components/site/service-deep-dive";
 import { StatsStrip } from "@/components/site/stats-strip";
 import { TeamCard } from "@/components/site/team-card";
 import { TestimonialCarousel } from "@/components/site/testimonial-carousel";
 import { TrustBar } from "@/components/site/trust-bar";
+import { VslPlaceholder } from "@/components/site/vsl-placeholder";
 import { ShieldCheck, Users, FileCheck } from "lucide-react";
 
 import { blogPosts } from "@/lib/content/blog-posts";
@@ -77,17 +77,12 @@ export default function HomePage() {
 
             <div className="lg:pl-6">
               {/*
-                Placeholder hero portrait sourced from Unsplash. Replace with
-                real photography (e.g. lead strategist or consultation scene)
-                and remove the Unsplash entry from next.config.mjs before
-                launch.
+                VSL slot. When the video embed URL is ready, replace
+                <VslPlaceholder /> with the iframe (see the component's
+                JSDoc for the exact pattern) and set VSL_EMBED_URL in
+                lib/config.ts so other code can reference it.
               */}
-              <PlaceholderImage
-                label="Lead strategist at ClearPath, reviewing client documents"
-                aspect="portrait"
-                priority
-                src="https://images.unsplash.com/photo-1556157382-97eda2d62296?auto=format&fit=crop&w=1200&h=1500&q=70"
-              />
+              <VslPlaceholder caption="Watch the 90-second intro" />
             </div>
           </div>
         </div>

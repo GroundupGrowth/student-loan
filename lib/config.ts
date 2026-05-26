@@ -20,6 +20,14 @@ export const OFFICE_ADDRESS = "{{OFFICE_ADDRESS}}"; // multi-line allowed
 
 // Booking & forms
 export const CALENDLY_URL = "{{CALENDLY_URL}}";
+
+// Home-hero VSL. Leave as the placeholder string until a real embed is
+// ready; the home page renders <VslPlaceholder /> when this is unset.
+// Example values once you have one:
+//   YouTube: "https://www.youtube.com/embed/<VIDEO_ID>"
+//   Vimeo:   "https://player.vimeo.com/video/<VIDEO_ID>"
+//   Wistia:  "https://fast.wistia.net/embed/iframe/<VIDEO_ID>"
+export const VSL_EMBED_URL = "{{VSL_EMBED_URL}}";
 export const NEWSLETTER_ENDPOINT = "{{NEWSLETTER_ENDPOINT}}";
 export const CONTACT_FORM_ENDPOINT = "{{CONTACT_FORM_ENDPOINT}}";
 export const REVIEW_FORM_URL = "{{REVIEW_FORM_URL}}";
