@@ -180,9 +180,9 @@ function Field({
       {help && (
         <p className="mt-1 text-[13px] text-[var(--ink-soft)]">{help}</p>
       )}
-      <div className="relative mt-2">
+      <div className="mt-2 flex items-stretch overflow-hidden rounded-sm border-[1.5px] border-[var(--line)] bg-white transition-shadow focus-within:border-[var(--ink)] focus-within:shadow-[0_0_0_4px_var(--coral-soft)]">
         {prefix && (
-          <span className="pointer-events-none absolute left-3.5 top-1/2 -translate-y-1/2 text-[15px] text-[var(--ink-soft)]">
+          <span className="flex items-center pl-3.5 pr-1 text-[15px] font-medium text-[var(--ink-soft)] select-none">
             {prefix}
           </span>
         )}
@@ -190,7 +190,7 @@ function Field({
           id={id}
           type="number"
           inputMode="decimal"
-          className={`field ${prefix ? "pl-7" : ""} ${suffix ? "pr-9" : ""}`}
+          className="min-w-0 flex-1 bg-transparent px-2 py-3 text-[15px] text-[var(--ink)] placeholder:text-[var(--ink-soft)] focus:outline-none [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
           value={Number.isFinite(value) ? value : ""}
           onChange={(e) => onChange(Number(e.target.value))}
           min={min}
@@ -198,7 +198,7 @@ function Field({
           step={step}
         />
         {suffix && (
-          <span className="pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-[15px] text-[var(--ink-soft)]">
+          <span className="flex items-center pl-1 pr-3.5 text-[15px] font-medium text-[var(--ink-soft)] select-none">
             {suffix}
           </span>
         )}
