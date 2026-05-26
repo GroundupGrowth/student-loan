@@ -3,19 +3,19 @@ import type { TeamMember } from "@/lib/content/team";
 
 export function TeamCard({ member }: { member: TeamMember }) {
   return (
-    <div className="card-base flex flex-col items-center p-7 text-center">
+    <div className="rounded-lg bg-white p-8 text-center shadow-card transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lift">
       <PlaceholderAvatar
         initials={member.initials}
         size="lg"
         label={`Portrait of ${member.role} — replace before launch`}
         src={member.photo}
       />
-      <h3 className="mt-4 font-serif text-[18px] text-[var(--navy)]">
+      <h3 className="mt-5 text-[18px] font-semibold text-[var(--ink)]">
         {member.name}
       </h3>
-      <p className="mt-1 text-[14px] text-[var(--slate)]">{member.role}</p>
-      <span className="mt-3 inline-block rounded-md border border-dashed border-[var(--gold)]/50 bg-[var(--cream)] px-2 py-1 text-[11px] uppercase tracking-[0.16em] text-[var(--slate)]">
-        Placeholder — replace before launch
+      <p className="mt-1 text-[14px] text-[var(--ink-soft)]">{member.role}</p>
+      <span className="mt-4 inline-block rounded-full bg-[var(--coral-soft)] px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-[var(--coral-deep)]">
+        Placeholder
       </span>
     </div>
   );

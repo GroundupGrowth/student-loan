@@ -5,27 +5,31 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-xl text-[15px] font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--navy)] focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full text-[15px] font-semibold transition-all focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[var(--coral-soft)] disabled:pointer-events-none disabled:opacity-50",
   {
     variants: {
       variant: {
         primary:
-          "bg-[var(--navy)] text-white hover:bg-[#163654] active:bg-[#0b2238]",
+          "bg-[var(--coral)] text-white hover:bg-[var(--coral-deep)] hover:-translate-y-px",
+        // Stamp variant — bold, with a hard ink-colored shadow underneath.
+        // Use sparingly (hero / final CTA band) for extra punch.
+        stamp:
+          "bg-[var(--coral)] text-white shadow-stamp hover:shadow-stamp-coral hover:bg-[var(--coral-deep)] hover:translate-y-[1px] active:translate-y-[2px] active:shadow-[0_2px_0_var(--coral-deep)]",
         secondary:
-          "border border-[var(--navy)] bg-transparent text-[var(--navy)] hover:bg-[var(--navy)] hover:text-white",
+          "border-[1.5px] border-[var(--ink)] bg-transparent text-[var(--ink)] hover:bg-[var(--ink)] hover:text-white",
         ghost:
-          "bg-transparent text-[var(--navy)] hover:bg-[var(--cream)]",
+          "bg-transparent text-[var(--ink)] hover:bg-[var(--surface-deep)]",
         link:
-          "bg-transparent p-0 text-[var(--navy)] underline-offset-4 hover:text-[var(--gold)] hover:underline",
+          "bg-transparent p-0 text-[var(--ink)] underline-offset-4 hover:text-[var(--coral)] hover:underline",
         onNavy:
-          "bg-white text-[var(--navy)] hover:bg-[var(--cream)]",
+          "bg-[var(--coral)] text-white hover:bg-[var(--coral-deep)] hover:-translate-y-px",
         onNavyOutline:
-          "border border-white/70 bg-transparent text-white hover:bg-white hover:text-[var(--navy)]",
+          "border-[1.5px] border-white/80 bg-transparent text-white hover:bg-white hover:text-[var(--ink-deep)]",
       },
       size: {
-        md: "h-11 px-[14px] py-[10px]",
-        lg: "h-12 px-5",
-        sm: "h-9 px-3 text-[14px]",
+        sm: "h-9 px-4 text-[14px]",
+        md: "h-11 px-[22px]",
+        lg: "h-[52px] px-7 text-[16px]",
       },
     },
     defaultVariants: {

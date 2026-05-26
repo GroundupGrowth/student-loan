@@ -6,6 +6,8 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { TestimonialCard } from "@/components/site/testimonial-card";
 import type { Testimonial } from "@/lib/content/testimonials";
 
+const tilts: Array<"left" | "none" | "right"> = ["left", "none", "right"];
+
 export function TestimonialCarousel({ items }: { items: Testimonial[] }) {
   const [index, setIndex] = React.useState(0);
   const length = items.length;
@@ -14,10 +16,10 @@ export function TestimonialCarousel({ items }: { items: Testimonial[] }) {
 
   return (
     <div className="relative">
-      {/* Desktop / tablet: 3-up grid (no interaction needed) */}
+      {/* Desktop / tablet: 3-up grid with subtle tilts */}
       <div className="hidden md:grid md:grid-cols-3 md:gap-6">
         {items.map((t, i) => (
-          <TestimonialCard key={i} testimonial={t} />
+          <TestimonialCard key={i} testimonial={t} tilt={tilts[i % tilts.length]} />
         ))}
       </div>
 
@@ -29,7 +31,7 @@ export function TestimonialCarousel({ items }: { items: Testimonial[] }) {
             type="button"
             onClick={() => goTo(index - 1)}
             aria-label="Previous testimonial"
-            className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-[var(--line)] text-[var(--navy)]"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[var(--line)] bg-white text-[var(--ink)]"
           >
             <ChevronLeft className="h-4 w-4" aria-hidden="true" />
           </button>
@@ -39,7 +41,7 @@ export function TestimonialCarousel({ items }: { items: Testimonial[] }) {
                 key={i}
                 className={
                   "h-2 w-2 rounded-full " +
-                  (i === index ? "bg-[var(--navy)]" : "bg-[var(--line)]")
+                  (i === index ? "bg-[var(--coral)]" : "bg-[var(--line)]")
                 }
               />
             ))}
@@ -48,7 +50,7 @@ export function TestimonialCarousel({ items }: { items: Testimonial[] }) {
             type="button"
             onClick={() => goTo(index + 1)}
             aria-label="Next testimonial"
-            className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-[var(--line)] text-[var(--navy)]"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-[var(--line)] bg-white text-[var(--ink)]"
           >
             <ChevronRight className="h-4 w-4" aria-hidden="true" />
           </button>

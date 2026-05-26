@@ -2,9 +2,7 @@ import { Play } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 type Props = {
-  /** Caption shown under the play button. */
   caption?: string;
-  /** Aspect ratio. 16/9 is the default and fits YouTube / Vimeo / Wistia. */
   aspect?: "16-9" | "9-16" | "1-1" | "4-5";
   className?: string;
 };
@@ -16,7 +14,7 @@ type Props = {
  * embed URL is ready, replace this component with an iframe inside the same
  * aspect-ratio container:
  *
- *   <div className="aspect-video overflow-hidden rounded-xl border border-[var(--line)]">
+ *   <div className="aspect-video overflow-hidden rounded-lg shadow-card">
  *     <iframe
  *       src="https://www.youtube.com/embed/<VIDEO_ID>"
  *       title="ClearPath intro video"
@@ -46,44 +44,34 @@ export function VslPlaceholder({
       aria-label="Video placeholder — embed will be added later"
       className={cn(
         aspectClass,
-        "relative w-full overflow-hidden rounded-xl border border-[var(--line)] bg-[var(--navy)] shadow-[0_18px_40px_-22px_rgba(15,42,68,0.55)]",
+        "relative w-full overflow-hidden rounded-lg bg-[var(--ink-deep)] shadow-lift",
         className,
       )}
     >
-      {/* Subtle texture so the placeholder reads as intentional */}
-      <div
-        aria-hidden="true"
-        className="absolute inset-0 opacity-20"
-        style={{
-          backgroundImage:
-            "repeating-linear-gradient(45deg, transparent 0 14px, rgba(255,255,255,0.05) 14px 28px)",
-        }}
-      />
-      {/* Vignette */}
+      {/* Subtle radial vignette */}
       <div
         aria-hidden="true"
         className="absolute inset-0"
         style={{
           background:
-            "radial-gradient(120% 90% at 50% 40%, transparent 30%, rgba(0,0,0,0.35) 100%)",
+            "radial-gradient(130% 90% at 50% 40%, transparent 30%, rgba(0,0,0,0.45) 100%)",
         }}
       />
 
       <div className="absolute inset-0 flex flex-col items-center justify-center gap-5 p-6 text-center">
-        <span className="inline-flex h-16 w-16 items-center justify-center rounded-full bg-white text-[var(--navy)] shadow-[0_10px_30px_rgba(0,0,0,0.35)] md:h-20 md:w-20">
-          {/* The lucide Play glyph is left-heavy; pad it 2px so it looks centered */}
+        <span className="inline-flex h-16 w-16 items-center justify-center rounded-full bg-[var(--coral)] text-white shadow-[0_10px_30px_rgba(0,0,0,0.45)] md:h-20 md:w-20">
           <Play
-            className="ml-[3px] h-7 w-7 fill-[var(--navy)] md:h-8 md:w-8"
+            className="ml-[3px] h-7 w-7 fill-white md:h-8 md:w-8"
             strokeWidth={0}
             aria-hidden="true"
           />
         </span>
         <div className="space-y-2">
-          <p className="font-serif text-[20px] leading-tight text-white md:text-[22px]">
+          <p className="text-[20px] font-semibold leading-tight text-white md:text-[22px]">
             {caption}
           </p>
-          <p className="text-[11px] uppercase tracking-[0.22em] text-white/60">
-            Video embed — coming soon
+          <p className="inline-block rounded-full bg-white/10 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.22em] text-white/80">
+            Video — coming soon
           </p>
         </div>
       </div>

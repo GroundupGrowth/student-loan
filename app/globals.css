@@ -4,18 +4,19 @@
 
 @layer base {
   :root {
-    /* Brand palette */
-    --navy: #0f2a44;
-    --gold: #c8a26b;
-    --cream: #f8f5ee;
-    --ink: #1a1a1a;
-    --slate: #5c6b7a;
-    --line: #e5e0d5;
+    /* v2 palette — see design.md */
+    --surface: #fbf5ec;
+    --surface-card: #ffffff;
+    --surface-deep: #f2e9d7;
+    --ink: #1b1b1f;
+    --ink-soft: #5a5a60;
+    --ink-deep: #14141a;
+    --line: #e8dfcb;
+    --coral: #ff6b4a;
+    --coral-deep: #e5532e;
+    --coral-soft: #ffe2d6;
 
-    /* shadcn hsl tokens, mapped onto brand */
-    --background: 0 0% 100%;
-    --foreground: 0 0% 10%;
-    --radius: 0.75rem;
+    --radius: 16px;
   }
 
   html {
@@ -25,38 +26,40 @@
   }
 
   body {
-    background: #ffffff;
+    background: var(--surface);
     color: var(--ink);
     font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
     font-size: 17px;
-    line-height: 1.65;
+    line-height: 1.6;
   }
 
   h1,
   h2,
   h3,
   h4 {
-    font-family: var(--font-serif), Georgia, serif;
-    color: var(--navy);
-    letter-spacing: -0.01em;
+    font-family: var(--font-sans), system-ui, sans-serif;
+    color: var(--ink);
+    letter-spacing: -0.02em;
+    font-weight: 700;
   }
 
   h1 {
-    font-size: clamp(2.25rem, 4vw, 3.75rem);
-    line-height: 1.05;
-    letter-spacing: -0.025em;
-    font-weight: 600;
+    font-size: clamp(2.5rem, 5vw, 4.25rem);
+    line-height: 1.04;
+    letter-spacing: -0.028em;
+    font-weight: 700;
   }
 
   h2 {
-    font-size: clamp(1.75rem, 3vw, 2.5rem);
-    line-height: 1.15;
-    font-weight: 600;
+    font-size: clamp(1.875rem, 3.5vw, 3rem);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
   }
 
   h3 {
-    font-size: clamp(1.25rem, 1.8vw, 1.5rem);
+    font-size: clamp(1.25rem, 2vw, 1.5rem);
     line-height: 1.25;
+    letter-spacing: -0.01em;
     font-weight: 600;
   }
 
@@ -64,22 +67,21 @@
     color: inherit;
   }
 
-  /* Always-visible, keyboard-friendly focus ring */
   :focus-visible {
-    outline: 2px solid var(--navy);
+    outline: 3px solid var(--coral-soft);
     outline-offset: 3px;
-    border-radius: 4px;
+    border-radius: 6px;
   }
 
   ::selection {
-    background: var(--navy);
+    background: var(--coral);
     color: #ffffff;
   }
 }
 
 @layer components {
   .section {
-    @apply py-14 md:py-24;
+    @apply py-20 md:py-[120px];
   }
 
   .container-content {
@@ -87,27 +89,29 @@
   }
 
   .eyebrow {
-    @apply inline-block text-[13px] font-medium uppercase tracking-[0.18em] text-[var(--slate)];
-  }
-
-  .eyebrow-gold {
-    @apply inline-block text-[13px] font-medium uppercase tracking-[0.18em] text-[var(--gold)];
+    @apply inline-block text-[12px] font-semibold uppercase tracking-[0.18em] text-[var(--ink-soft)];
   }
 
   .text-body {
-    @apply text-[17px] leading-[1.65] text-[var(--ink)];
+    @apply text-[17px] leading-[1.6] text-[var(--ink)];
+  }
+
+  .text-lead {
+    @apply text-[20px] leading-[1.45] text-[var(--ink-soft)];
+    letter-spacing: -0.005em;
+    font-weight: 500;
   }
 
   .text-meta {
-    @apply text-[14px] leading-[1.5] text-[var(--slate)];
+    @apply text-[14px] leading-[1.5] text-[var(--ink-soft)];
   }
 
   .surface-cream {
-    background: var(--cream);
+    background: var(--surface-deep);
   }
 
   .surface-navy {
-    background: var(--navy);
+    background: var(--ink-deep);
     color: #ffffff;
   }
 
@@ -119,30 +123,41 @@
   }
 
   .card-base {
-    @apply rounded-xl border border-[var(--line)] bg-white p-6 transition-all duration-200;
+    @apply rounded-md border border-[var(--line)] bg-white p-7 transition-all duration-200;
+    box-shadow:
+      0 8px 22px -10px rgba(20, 20, 26, 0.08),
+      0 2px 6px rgba(20, 20, 26, 0.04);
   }
 
   .card-hover {
-    @apply hover:-translate-y-0.5 hover:shadow-[0_12px_28px_-18px_rgba(15,42,68,0.35)];
+    @apply hover:-translate-y-0.5;
+  }
+  .card-hover:hover {
+    box-shadow:
+      0 18px 38px -16px rgba(20, 20, 26, 0.18),
+      0 4px 10px rgba(20, 20, 26, 0.05);
   }
 
   .underline-gold {
-    background-image: linear-gradient(var(--gold), var(--gold));
+    background-image: linear-gradient(var(--coral), var(--coral));
     background-position: 0 100%;
     background-repeat: no-repeat;
     background-size: 0 2px;
     transition: background-size 0.2s ease-out;
   }
-
   .underline-gold:hover {
     background-size: 100% 2px;
   }
 }
 
-/* Subtle field styles consistent across forms */
+/* Form fields — warm border, coral focus halo */
 .field {
-  @apply w-full rounded-md border border-[var(--line)] bg-white px-3 py-2.5 text-[15px] text-[var(--ink)] placeholder:text-[var(--slate)] focus:border-[var(--navy)] focus:outline-none;
+  @apply w-full rounded-sm border border-[var(--line)] bg-white px-3.5 py-3 text-[15px] text-[var(--ink)] placeholder:text-[var(--ink-soft)] focus:border-[var(--ink)] focus:outline-none;
+  border-width: 1.5px;
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
 }
 .field:focus {
-  box-shadow: 0 0 0 3px rgba(15, 42, 68, 0.18);
+  box-shadow: 0 0 0 4px var(--coral-soft);
 }

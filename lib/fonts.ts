@@ -1,16 +1,14 @@
-import { Inter, Source_Serif_4 } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 
-export const sans = Inter({
+/**
+ * v2 design system: a single typeface, Plus Jakarta Sans. Friendly
+ * grotesque, wide weight range, looks confident at display sizes and clean
+ * at body sizes. Replace this single import to swap fonts site-wide.
+ */
+export const sans = Plus_Jakarta_Sans({
   subsets: ["latin"],
   display: "swap",
   variable: "--font-sans",
   preload: true,
-});
-
-export const serif = Source_Serif_4({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-serif",
-  preload: true,
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700", "800"],
 });

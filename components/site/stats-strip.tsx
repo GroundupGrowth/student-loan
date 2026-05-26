@@ -9,15 +9,15 @@ const items = [
 
 export function StatsStrip() {
   return (
-    <section className="surface-navy">
-      <div className="container max-w-content py-14 md:py-20">
+    <section className="bg-[var(--ink-deep)] text-white">
+      <div className="container max-w-content py-16 md:py-24">
         <ul className="grid grid-cols-2 gap-y-10 gap-x-6 text-center md:grid-cols-4">
           {items.map((item) => (
             <li key={item.label}>
-              <p className="font-serif text-[clamp(2.5rem,5vw,3.75rem)] font-semibold leading-none text-white">
+              <p className="text-[clamp(2.75rem,6vw,4.25rem)] font-extrabold leading-none tracking-tight text-white">
                 {item.number}
               </p>
-              <p className="mt-3 text-[13px] uppercase tracking-[0.18em] text-white/70">
+              <p className="mt-3 text-[12px] font-semibold uppercase tracking-[0.18em] text-white/60">
                 {item.label}
               </p>
             </li>

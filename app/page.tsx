@@ -3,16 +3,22 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { BlogCard } from "@/components/site/blog-card";
 import { CtaBand } from "@/components/site/cta-band";
+import { NumberedCircle } from "@/components/site/numbered-circle";
 import { ServiceDeepDive } from "@/components/site/service-deep-dive";
 import { StatsStrip } from "@/components/site/stats-strip";
+import { StickerTag } from "@/components/site/sticker-tag";
 import { TeamCard } from "@/components/site/team-card";
 import { TestimonialCarousel } from "@/components/site/testimonial-carousel";
 import { TrustBar } from "@/components/site/trust-bar";
 import { VslPlaceholder } from "@/components/site/vsl-placeholder";
+import { UnderlineSwoosh } from "@/components/site/svg-doodles";
 import {
   Database,
   FileCheck,
   GraduationCap,
+  HeadphoneOff,
+  Layers,
+  RefreshCcw,
   ShieldCheck,
   Users,
 } from "lucide-react";
@@ -28,43 +34,64 @@ export const metadata = {
     "A licensed strategist reviews your federal student loans, models every repayment plan you qualify for, and handles the paperwork. No call centers. No scripts. No pressure.",
 };
 
+const painPoints = [
+  {
+    icon: HeadphoneOff,
+    title: "Servicer call centers can't help.",
+    description:
+      "They read scripts. They don't model your numbers. They have no incentive to put you in the cheapest plan.",
+  },
+  {
+    icon: Layers,
+    title: "The rules change every year.",
+    description:
+      "SAVE, PAYE, IBR, ICR, PSLF — the labels keep shifting and the wrong plan can cost you tens of thousands.",
+  },
+  {
+    icon: RefreshCcw,
+    title: "Re-certification quietly resets you.",
+    description:
+      "Miss a yearly form and your payment jumps. Switch plans wrong and your PSLF count resets to zero.",
+  },
+];
+
 const whatWeHandle = [
   {
     icon: Database,
-    title: "We pull your full federal loan record",
+    title: "We pull your full federal loan record.",
     description:
-      "Every loan, every servicer, the whole NSLDS picture. No guessing about what you owe to whom or which rules apply to which balance.",
+      "Every loan, every servicer, the whole NSLDS picture. No guessing about what you owe to whom or which rules apply.",
   },
   {
     icon: GraduationCap,
-    title: "We model every program you qualify for",
+    title: "We model every program you qualify for.",
     description:
-      "IDR plans, PSLF, Borrower's Defense, Disability Discharge — your real numbers, side by side, with the tradeoffs in plain English.",
+      "IDR plans, PSLF, Borrower's Defense, Disability Discharge — your real numbers, side by side, in plain English.",
   },
   {
     icon: FileCheck,
-    title: "We file the paperwork and track it",
+    title: "We file the paperwork and track it.",
     description:
-      "Forms drafted, submitted, followed up. Annual re-certification handled on your behalf. One strategist, not a call-center queue.",
+      "Forms drafted, submitted, followed up. Annual re-certification handled. One strategist, not a call-center queue.",
   },
 ];
 
 const whyChoose = [
   {
     icon: Users,
-    title: "Strategists, not call-center reps",
+    title: "Strategists, not call-center reps.",
     description:
       "Your case is handled by a licensed strategist who knows the federal student loan rulebook cold. The person you meet on your consultation is the person who runs your plan.",
   },
   {
     icon: FileCheck,
-    title: "Your numbers, your plan",
+    title: "Your numbers, your plan.",
     description:
       "Every plan starts with your real NSLDS record, your income, and your family situation. We don't recommend anything we wouldn't put our own family in.",
   },
   {
     icon: ShieldCheck,
-    title: "Flat fees, no hidden cuts",
+    title: "Flat fees. No hidden cuts.",
     description:
       "Flat fee quoted up front on your free consultation. No percentage-of-savings tricks, no surprise charges, no charges for re-certification once you're a client.",
   },
@@ -74,29 +101,34 @@ export default function HomePage() {
   return (
     <>
       {/* 1. Hero */}
-      <section className="section pb-10 md:pb-20">
+      <section className="bg-[var(--surface)] pt-12 pb-16 md:pt-20 md:pb-24">
         <div className="container max-w-content">
           <div className="grid items-center gap-10 md:gap-12 lg:grid-cols-[1.05fr_1fr]">
             <div>
-              <span className="eyebrow">Federal student loan strategy</span>
-              <h1 className="mt-4 text-balance">
-                Lower your payment. Get a real plan. Sleep better.
+              <StickerTag>Federal student loan strategy</StickerTag>
+              <h1 className="mt-5 text-balance">
+                Lower your payment.{" "}
+                <span className="relative inline-block">
+                  Get a real plan.
+                  <UnderlineSwoosh />
+                </span>{" "}
+                Sleep better.
               </h1>
-              <p className="mt-5 max-w-xl font-serif text-[20px] leading-snug text-[var(--slate)] md:text-[22px]">
+              <p className="mt-6 max-w-xl text-lead">
                 A licensed strategist reviews your federal student loans,
                 models every repayment plan you qualify for, and walks you
                 through your options in plain English. No call centers. No
                 scripts. No pressure.
               </p>
-              <div className="mt-8 flex flex-wrap items-center gap-3">
-                <Button asChild size="lg">
+              <div className="mt-9 flex flex-wrap items-center gap-3">
+                <Button asChild variant="stamp" size="lg">
                   <Link href="/book-a-consultation">Book Free Consultation</Link>
                 </Button>
                 <Button asChild variant="secondary" size="lg">
                   <Link href="/services/student-loan-relief">See how it works</Link>
                 </Button>
               </div>
-              <p className="mt-6 max-w-md text-[14px] text-[var(--slate)]">
+              <p className="mt-6 max-w-md text-[14px] text-[var(--ink-soft)]">
                 30-minute call. No obligation. Walk away with a written next
                 step whether you hire us or not.
               </p>
@@ -118,36 +150,39 @@ export default function HomePage() {
       {/* 2. Trust bar */}
       <TrustBar />
 
-      {/* 3. What we handle (replaces the old 4-card services overview) */}
-      <section id="what-we-handle" className="section">
+      {/* 3. Pain-point strip */}
+      <section className="section bg-[var(--surface)]">
         <div className="container max-w-content">
           <div className="mx-auto max-w-3xl text-center">
-            <span className="eyebrow">What we do</span>
-            <h2 className="mt-3 text-balance">
-              We handle the paperwork. You get the lower payment.
+            <StickerTag>The trap most borrowers are stuck in</StickerTag>
+            <h2 className="mt-5 text-balance">
+              That&rsquo;s not your fault — and it&rsquo;s fixable.
             </h2>
-            <p className="mt-4 text-body text-[var(--slate)]">
-              We do one thing — federal student loans — and we do it
-              thoroughly. Here&apos;s the three-part service you get on every
-              engagement.
+            <p className="mt-5 text-lead">
+              The federal student loan system is designed for the servicers,
+              not for you. Three reasons most borrowers are in the wrong plan
+              and don&rsquo;t know it.
             </p>
           </div>
-          <div className="mt-12 grid gap-5 md:grid-cols-3">
-            {whatWeHandle.map((item) => {
+          <div className="mt-14 grid gap-5 md:grid-cols-3">
+            {painPoints.map((item) => {
               const Icon = item.icon;
               return (
-                <div key={item.title} className="card-base h-full p-7">
-                  <span className="inline-flex h-11 w-11 items-center justify-center rounded-lg border border-[var(--line)] bg-[var(--cream)]">
+                <div
+                  key={item.title}
+                  className="rounded-md bg-white p-7 shadow-card"
+                >
+                  <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-[var(--coral-soft)]">
                     <Icon
-                      className="h-5 w-5 text-[var(--navy)]"
-                      strokeWidth={1.5}
+                      className="h-5 w-5 text-[var(--coral)]"
+                      strokeWidth={1.8}
                       aria-hidden="true"
                     />
                   </span>
-                  <h3 className="mt-5 font-serif text-[20px] text-[var(--navy)]">
+                  <h3 className="mt-5 text-[18px] font-semibold text-[var(--ink)]">
                     {item.title}
                   </h3>
-                  <p className="mt-3 text-[15px] leading-relaxed text-[var(--slate)]">
+                  <p className="mt-3 text-[15px] leading-relaxed text-[var(--ink-soft)]">
                     {item.description}
                   </p>
                 </div>
@@ -157,23 +192,71 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 4. Service deep-dive — single rich section for the student loan service */}
-      <ServiceDeepDive service={studentLoanService} imageOnRight={true} surface="cream" />
-
-      {/* 5. Meet the Team */}
-      <section className="section">
+      {/* 4. What we handle 3-up */}
+      <section id="what-we-handle" className="section bg-[var(--surface-deep)]">
         <div className="container max-w-content">
           <div className="mx-auto max-w-3xl text-center">
-            <span className="eyebrow">The team</span>
-            <h2 className="mt-3 text-balance">
-              Meet the people who&apos;ll handle your case.
+            <StickerTag>What we do</StickerTag>
+            <h2 className="mt-5 text-balance">
+              We handle the paperwork. You get the lower payment.
             </h2>
-            <p className="mt-4 text-body text-[var(--slate)]">
-              You won&apos;t be routed through a call center. The strategist you
-              meet on your consultation is the strategist who runs your plan.
+            <p className="mt-5 text-lead">
+              We do one thing — federal student loans — and we do it
+              thoroughly. Here&rsquo;s the three-part service you get on
+              every engagement.
             </p>
           </div>
-          <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-14 grid gap-5 md:grid-cols-3">
+            {whatWeHandle.map((item, i) => {
+              const Icon = item.icon;
+              return (
+                <div
+                  key={item.title}
+                  className="relative rounded-lg bg-white p-7 shadow-card"
+                >
+                  <NumberedCircle n={String(i + 1).padStart(2, "0")} />
+                  <div className="mt-6 flex items-start gap-3">
+                    <Icon
+                      className="mt-1 h-6 w-6 shrink-0 text-[var(--coral)]"
+                      strokeWidth={1.6}
+                      aria-hidden="true"
+                    />
+                    <h3 className="text-[18px] font-semibold leading-tight text-[var(--ink)]">
+                      {item.title}
+                    </h3>
+                  </div>
+                  <p className="mt-3 text-[15px] leading-relaxed text-[var(--ink-soft)]">
+                    {item.description}
+                  </p>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      {/* 5. Single service deep-dive */}
+      <ServiceDeepDive
+        service={studentLoanService}
+        imageOnRight={true}
+        surface="white"
+      />
+
+      {/* 6. Meet the Team */}
+      <section className="section bg-[var(--surface-deep)]">
+        <div className="container max-w-content">
+          <div className="mx-auto max-w-3xl text-center">
+            <StickerTag>The team</StickerTag>
+            <h2 className="mt-5 text-balance">
+              Meet the people who&rsquo;ll handle your case.
+            </h2>
+            <p className="mt-5 text-lead">
+              You won&rsquo;t be routed through a call center. The strategist
+              you meet on your consultation is the strategist who runs your
+              plan.
+            </p>
+          </div>
+          <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
             {team.map((member) => (
               <TeamCard key={member.name} member={member} />
             ))}
@@ -181,31 +264,34 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 6. Why choose us */}
-      <section className="section surface-cream">
+      {/* 7. Why choose us */}
+      <section className="section bg-[var(--surface)]">
         <div className="container max-w-content">
           <div className="mx-auto max-w-3xl text-center">
-            <span className="eyebrow">Why ClearPath</span>
-            <h2 className="mt-3 text-balance">
+            <StickerTag>Why ClearPath</StickerTag>
+            <h2 className="mt-5 text-balance">
               Why borrowers trust ClearPath with their federal student loans.
             </h2>
           </div>
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
+          <div className="mt-14 grid gap-6 md:grid-cols-3">
             {whyChoose.map((item) => {
               const Icon = item.icon;
               return (
-                <div key={item.title} className="card-base h-full p-7">
-                  <span className="inline-flex h-11 w-11 items-center justify-center rounded-lg border border-[var(--line)] bg-white">
+                <div
+                  key={item.title}
+                  className="rounded-md bg-white p-7 shadow-card"
+                >
+                  <span className="inline-flex h-12 w-12 items-center justify-center rounded-full bg-[var(--coral-soft)]">
                     <Icon
-                      className="h-5 w-5 text-[var(--navy)]"
-                      strokeWidth={1.5}
+                      className="h-5 w-5 text-[var(--coral)]"
+                      strokeWidth={1.8}
                       aria-hidden="true"
                     />
                   </span>
-                  <h3 className="mt-5 font-serif text-[20px] text-[var(--navy)]">
+                  <h3 className="mt-5 text-[19px] font-semibold text-[var(--ink)]">
                     {item.title}
                   </h3>
-                  <p className="mt-3 text-[15px] leading-relaxed text-[var(--slate)]">
+                  <p className="mt-3 text-[15px] leading-relaxed text-[var(--ink-soft)]">
                     {item.description}
                   </p>
                 </div>
@@ -215,27 +301,27 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 7. Stats strip */}
+      {/* 8. Stats strip */}
       <StatsStrip />
 
-      {/* 8. Featured testimonials */}
-      <section className="section">
+      {/* 9. Testimonials */}
+      <section className="section bg-[var(--surface)]">
         <div className="container max-w-content">
           <div className="mx-auto max-w-3xl text-center">
-            <span className="eyebrow">Client stories</span>
-            <h2 className="mt-3 text-balance">What our clients say.</h2>
-            <p className="mt-4 text-body text-[var(--slate)]">
+            <StickerTag>Client stories</StickerTag>
+            <h2 className="mt-5 text-balance">What our clients say.</h2>
+            <p className="mt-5 text-lead">
               {/* PLACEHOLDER — replace placeholder testimonial copy in lib/content/testimonials.ts with real, written-permission quotes before launch. */}
               Quotes are placeholders until real client reviews are added.
             </p>
           </div>
-          <div className="mt-12">
+          <div className="mt-14">
             <TestimonialCarousel items={testimonials} />
           </div>
           <div className="mt-10 text-center">
             <Link
               href="/reviews"
-              className="text-[15px] font-medium text-[var(--navy)] underline-gold"
+              className="text-[15px] font-semibold text-[var(--coral)] underline-gold"
             >
               Read more reviews →
             </Link>
@@ -243,17 +329,17 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 9. Blog teaser */}
-      <section className="section surface-cream">
+      {/* 10. Blog teaser */}
+      <section className="section bg-[var(--surface-deep)]">
         <div className="container max-w-content">
           <div className="flex flex-col items-start justify-between gap-4 md:flex-row md:items-end">
             <div className="max-w-xl">
-              <span className="eyebrow">Insights</span>
-              <h2 className="mt-3 text-balance">Latest from the blog.</h2>
+              <StickerTag>Insights</StickerTag>
+              <h2 className="mt-5 text-balance">Latest from the blog.</h2>
             </div>
             <Link
               href="/blog"
-              className="text-[15px] font-medium text-[var(--navy)] underline-gold"
+              className="text-[15px] font-semibold text-[var(--ink)] underline-gold"
             >
               See all posts →
             </Link>
@@ -266,10 +352,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 10. Final CTA band */}
+      {/* 11. Final CTA band */}
       <CtaBand
         heading="Ready for a real student loan plan?"
-        subheading="Book a free 30-minute consultation. We&rsquo;ll pull your federal loan record, model the math, and tell you the next step — whether you hire us or not."
+        subheading="Book a free 30-minute consultation. We'll pull your federal loan record, model the math, and tell you the next step — whether you hire us or not."
       />
     </>
   );

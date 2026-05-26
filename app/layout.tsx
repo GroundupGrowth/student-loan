@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 import "./globals.css";
-import { sans, serif } from "@/lib/fonts";
+import { sans } from "@/lib/fonts";
 import { Header } from "@/components/site/header";
 import { Footer } from "@/components/site/footer";
 import { CookieBanner } from "@/components/site/cookie-banner";
@@ -43,7 +43,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${sans.variable} ${serif.variable}`}>
+    <html lang="en" className={sans.variable}>
       <body className="min-h-screen bg-white">
         {/*
           ANALYTICS PLACEHOLDER
