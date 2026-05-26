@@ -107,12 +107,12 @@ export default function HomePage() {
             <div>
               <StickerTag>Federal student loan strategy</StickerTag>
               <h1 className="mt-5 text-balance">
-                Lower your payment.{" "}
-                <span className="relative inline-block">
-                  Get a real plan.
+                Lower your payment. Get a{" "}
+                <span className="relative inline-block whitespace-nowrap">
+                  real plan
                   <UnderlineSwoosh />
-                </span>{" "}
-                Sleep better.
+                </span>
+                . Sleep better.
               </h1>
               <p className="mt-6 max-w-xl text-lead">
                 A licensed strategist reviews your federal student loans,

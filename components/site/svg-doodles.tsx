@@ -6,23 +6,27 @@ import { cn } from "@/lib/utils";
  * SVG accents in coral. Use sparingly per design.md.
  */
 
-/** A hand-drawn underline swoosh — sits beneath one key word in a headline. */
+/** A hand-drawn underline swoosh — sits beneath one key phrase in a headline. */
 export function UnderlineSwoosh({
   className,
   ...rest
 }: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
-      viewBox="0 0 200 18"
+      viewBox="0 0 200 12"
       fill="none"
       stroke="currentColor"
-      strokeWidth="4"
+      strokeWidth="6"
       strokeLinecap="round"
+      preserveAspectRatio="none"
       aria-hidden="true"
-      className={cn("absolute left-0 -bottom-2 w-full text-[var(--coral)]", className)}
+      className={cn(
+        "pointer-events-none absolute -bottom-1.5 left-0 right-0 h-3 w-full text-[var(--coral)]",
+        className,
+      )}
       {...rest}
     >
-      <path d="M4 12 C 40 4, 80 16, 130 8 S 190 14, 196 6" />
+      <path d="M3 7 C 38 1, 78 11, 128 5 S 186 9, 197 3" />
     </svg>
   );
 }
