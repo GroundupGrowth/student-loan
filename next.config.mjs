@@ -1,14 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Static export so the site can be deployed anywhere as plain files.
-  // Remove `output: 'export'` if you need ISR or server components with
-  // dynamic rendering.
-  output: "export",
-  images: {
-    // next/image requires this when using `output: 'export'`.
-    unoptimized: true,
-  },
-  trailingSlash: false,
+  // Vercel deploys Next.js apps as fully-managed Next.js (server + static
+  // chunks). `output: 'export'` is intentionally NOT set — it produces a
+  // static /out folder that Vercel routes incorrectly, causing 404s.
+  //
+  // If you ever need a portable static build for another host (S3, Netlify
+  // static, GitHub Pages), add `output: 'export'` back AND set
+  // `images.unoptimized = true`.
   reactStrictMode: true,
 };
 
