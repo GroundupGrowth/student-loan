@@ -17,6 +17,7 @@ import {
 
 const exploreLinks = [
   { href: "/services/student-loan-relief", label: "How It Works" },
+  { href: "/calculator", label: "Payment Calculator" },
   { href: "/reviews", label: "Reviews" },
   { href: "/blog", label: "Blog" },
   { href: "/book-a-consultation", label: "Book a Consultation" },
