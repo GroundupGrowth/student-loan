@@ -14,8 +14,8 @@ const navLinks: { href: string; label: string }[] = [
   { href: "/about", label: "About" },
   { href: "/services/student-loan-relief", label: "How It Works" },
   { href: "/calculator", label: "Calculator" },
+  { href: "/wiki", label: "Wiki" },
   { href: "/reviews", label: "Reviews" },
-  { href: "/blog", label: "Blog" },
   { href: "/contact", label: "Contact" },
 ];
 

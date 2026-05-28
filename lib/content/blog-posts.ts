@@ -25,10 +25,10 @@ export const blogPosts: BlogPost[] = [
     image:
       "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=1600&q=70",
     body: `
-      <p>If you have federal student loans and a pulse, you've probably been told to "switch to an income-driven plan" by at least one person at your loan servicer. The advice isn't wrong — it's just incomplete. There are four federal income-driven repayment plans in play right now, and the math under each one is different. Picking the wrong one can cost you tens of thousands over the life of your loan.</p>
+      <p>If you have federal student loans and a pulse, you've probably been told to "switch to an <a href="/wiki/income-driven-repayment">income-driven plan</a>" by at least one person at your loan servicer. The advice isn't wrong — it's just incomplete. There are four federal income-driven repayment plans in play right now, and the math under each one is different. Picking the wrong one can cost you tens of thousands over the life of your loan.</p>
       <p>This post walks through what each plan actually does in 2026, who it tends to be the best fit for, and the questions to ask before you sign anything. None of this is legal or tax advice; if you want a personalized recommendation, you can <a href="/book-a-consultation">book a free consultation</a> and we'll model the numbers with you.</p>
       <h2>The four plans, in plain English</h2>
-      <p>SAVE, PAYE, IBR, and ICR each compute your monthly payment as some percentage of your discretionary income, but they use different definitions of discretionary income, different percentage caps, and different forgiveness timelines. They also treat marriage, family size, and graduate loans differently.</p>
+      <p><a href="/wiki/save-plan">SAVE</a>, <a href="/wiki/paye-plan">PAYE</a>, <a href="/wiki/ibr-plan">IBR</a>, and <a href="/wiki/icr-plan">ICR</a> each compute your monthly payment as some percentage of your <a href="/wiki/discretionary-income">discretionary income</a>, but they use different definitions of discretionary income, different percentage caps, and different forgiveness timelines. They also treat marriage, family size, and graduate loans differently.</p>
       <h2>Who tends to win under each one</h2>
       <p>As a rough heuristic: SAVE tends to win for undergraduate-only borrowers with lower incomes; PAYE and IBR often win for higher-income borrowers with mixed undergraduate and graduate loans; ICR is rarely the best plan unless you have Parent PLUS loans you've consolidated. But this is a heuristic, not a rule — the actual answer depends on your exact loan types, family size, filing status, and projected income.</p>
       <h2>Questions to ask before you switch</h2>
@@ -46,7 +46,7 @@ export const blogPosts: BlogPost[] = [
     image:
       "https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1600&q=70",
     body: `
-      <p>Public Service Loan Forgiveness (PSLF) forgives the remaining balance on your Direct Loans after 120 qualifying monthly payments, as long as you've been working full-time for a qualifying employer the whole time. On paper that's clear. In practice, almost every borrower we talk to has at least one misunderstanding that's costing them months — sometimes years — of credit.</p>
+      <p><a href="/wiki/pslf">Public Service Loan Forgiveness (PSLF)</a> forgives the remaining balance on your <a href="/wiki/direct-loans">Direct Loans</a> after 120 qualifying monthly payments, as long as you've been working full-time for a qualifying employer the whole time. On paper that's clear. In practice, almost every borrower we talk to has at least one misunderstanding that's costing them months — sometimes years — of credit.</p>
       <h2>Who qualifies (and who doesn't)</h2>
       <p>You qualify if you work full-time for a U.S. federal, state, local, or tribal government agency, or for most 501(c)(3) nonprofits. Teachers in public schools, nurses in public hospitals, attorneys in legal aid, and most government employees qualify. Independent contractors usually do not. Religious work counts as long as the employer is a qualifying 501(c)(3) — the post-2021 rules clarified this.</p>
       <h2>How the 120-payment count really works</h2>
@@ -70,7 +70,7 @@ export const blogPosts: BlogPost[] = [
     image:
       "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1600&q=70",
     body: `
-      <p>Borrower's Defense to Repayment (BDR) is the federal program that can discharge your entire federal student loan balance — and refund payments you've already made — if your school misled you in a way that affected your decision to enroll, pay, or take out loans. It's the most valuable single tool in federal student aid, and it's also the most misunderstood. Most people who could file don't, and most people who do file misunderstand what they're actually claiming.</p>
+      <p><a href="/wiki/borrowers-defense">Borrower's Defense to Repayment (BDR)</a> is the federal program that can discharge your entire federal student loan balance — and refund payments you've already made — if your school misled you in a way that affected your decision to enroll, pay, or take out loans. It's the most valuable single tool in federal student aid, and it's also the most misunderstood. Most people who could file don't, and most people who do file misunderstand what they're actually claiming.</p>
       <h2>The standard, in plain English</h2>
       <p>To win a Borrower's Defense claim, you generally need to show that your school (or someone acting on its behalf) made a substantial misrepresentation that you relied on, and that the misrepresentation caused you financial harm. The classic examples: a school promised a 95% job-placement rate that wasn't true, claimed credits would transfer when they wouldn't, lied about its accreditation, or guaranteed a certification it didn't actually deliver.</p>
       <h2>When you have a shot</h2>
