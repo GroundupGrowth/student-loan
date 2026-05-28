@@ -553,6 +553,224 @@ export const wikiEntries: WikiEntry[] = [
     `,
     related: ["save-plan", "capitalized-interest", "pslf"],
   },
+
+  // ---------------- Round 2: additional high-intent entries ----------------
+  {
+    slug: "teacher-loan-forgiveness",
+    title: "Teacher Loan Forgiveness",
+    category: "forgiveness",
+    excerpt:
+      "Federal program that forgives up to $17,500 of your Direct or Stafford loans after five consecutive years teaching in a low-income school. Separate from PSLF.",
+    keywords: ["Teacher Loan Forgiveness", "TLF", "Title I schools"],
+    updated: "2026-05-01",
+    body: `
+      <p>Teacher Loan Forgiveness (TLF) is a federal program that forgives up to $17,500 of your <a href="/wiki/direct-loans">Direct</a> or Stafford loans after five consecutive academic years teaching full-time at a qualifying low-income school. It's separate from — and can sometimes be combined with — <a href="/wiki/pslf">PSLF</a>.</p>
+      <h2>How much is forgiven</h2>
+      <p>The forgiveness amount depends on your subject and certification:</p>
+      <ul>
+        <li><strong>Up to $17,500</strong> for highly-qualified secondary math, secondary science, or special-education teachers (any grade level).</li>
+        <li><strong>Up to $5,000</strong> for other highly-qualified full-time teachers at qualifying schools.</li>
+      </ul>
+      <h2>Qualifying schools</h2>
+      <p>The school must be listed in the federal "Teacher Cancellation Low Income (TCLI) Directory" for at least one of your five qualifying years. Most Title I schools qualify. The list is updated annually — confirm your school appears for each year you taught there.</p>
+      <h2>Eligibility checklist</h2>
+      <ol>
+        <li>You taught full-time for five complete and consecutive academic years</li>
+        <li>At least one of those years was after the 1997-98 school year</li>
+        <li>You weren't in default on the loans being forgiven (or you've made satisfactory repayment arrangements)</li>
+        <li>You were a "highly qualified" teacher under federal definitions</li>
+        <li>You hold a bachelor's degree (or higher)</li>
+      </ol>
+      <h2>TLF vs. PSLF</h2>
+      <p>TLF and <a href="/wiki/pslf">PSLF</a> are different programs with different rules. TLF gives you a capped amount ($5K or $17.5K) after 5 years; PSLF forgives your entire remaining balance after 10 years. The years used to qualify for TLF generally <em>do not</em> count toward PSLF if you claim TLF — though recent rule changes have softened this in some cases. Most teachers with significant balances are better off going straight for PSLF.</p>
+      <h2>How to apply</h2>
+      <p>Submit the Teacher Loan Forgiveness Application after you've completed your five qualifying years. Your school's chief administrative officer signs the form to certify your employment. Send it to your loan servicer.</p>
+    `,
+    related: ["pslf", "direct-loans", "borrowers-defense"],
+  },
+  {
+    slug: "closed-school-discharge",
+    title: "Closed School Discharge",
+    category: "forgiveness",
+    excerpt:
+      "Federal program that discharges your federal student loans if your school closed while you were enrolled — or shortly after you withdrew.",
+    keywords: ["closed school discharge", "school closure", "loan discharge"],
+    updated: "2026-05-01",
+    body: `
+      <p>Closed School Discharge is a federal program that discharges your federal student loans if the school you were attending closed while you were enrolled — or shortly after you withdrew. It's a separate program from <a href="/wiki/borrowers-defense">Borrower's Defense</a> and has its own narrower (but easier) requirements.</p>
+      <h2>Who qualifies</h2>
+      <p>You may qualify for Closed School Discharge if all of the following are true:</p>
+      <ul>
+        <li>Your school closed while you were enrolled, or</li>
+        <li>You withdrew within 180 days before the closure date (for closures on or after July 1, 2020; the window is 120 days for earlier closures)</li>
+        <li>You did not complete your program through a teach-out agreement at another school</li>
+      </ul>
+      <h2>What gets discharged</h2>
+      <p>Federal <a href="/wiki/direct-loans">Direct Loans</a>, FFEL Loans, and Perkins Loans you took out to attend the closed school can all be discharged. The Department of Education will refund payments you've already made on those loans, and the loan history is removed from your credit report.</p>
+      <h2>How to apply</h2>
+      <p>For some major school closures, the Department of Education automatically discharges affected borrowers without an application — you'll receive a letter. For others, you submit a Closed School Discharge Application to your loan servicer with documentation of your enrollment.</p>
+      <h2>Closed School vs. Borrower's Defense</h2>
+      <p>Closed School Discharge is narrower but easier: you don't have to prove your school misled you, only that it closed. <a href="/wiki/borrowers-defense">Borrower's Defense</a> is broader: it covers schools that misled you about anything material, whether they closed or not. If your school closed <em>and</em> misled you, talk to a strategist — sometimes filing both is the right move.</p>
+      <h2>What you give up</h2>
+      <p>If you completed your program at the closed school, or finished it through a teach-out at another institution, you generally don't qualify for Closed School Discharge. You may still qualify for Borrower's Defense if the school misled you.</p>
+    `,
+    related: ["borrowers-defense", "tpd-discharge", "direct-loans"],
+  },
+  {
+    slug: "idr-recertification",
+    title: "IDR Re-Certification (Annual)",
+    category: "process",
+    excerpt:
+      "The yearly process of updating your income and family size to keep your IDR payment accurate. Miss it and your servicer can default you back to the Standard Plan.",
+    keywords: ["IDR recertification", "annual recertification", "income verification"],
+    updated: "2026-05-01",
+    body: `
+      <p>Every federal <a href="/wiki/income-driven-repayment">income-driven repayment</a> plan requires you to re-certify your income and family size every 12 months. The re-certification updates the inputs to the payment formula so your monthly payment stays accurate as your income changes.</p>
+      <h2>What you submit</h2>
+      <p>The re-certification asks for your most recent federal tax return information (adjusted gross income) and your current family size. You can authorize the Department of Education to pull your AGI directly from the IRS, which is faster and more accurate than self-reporting.</p>
+      <h2>When it's due</h2>
+      <p>Your servicer sets your re-certification deadline based on when you first enrolled in IDR. You'll receive notifications by mail and email starting about 60 days before the deadline. The deadline is the same date every year — the anniversary of your enrollment.</p>
+      <h2>What happens if you miss it</h2>
+      <p>If you miss the re-certification deadline by more than 10 days, several bad things happen:</p>
+      <ol>
+        <li>You're removed from your IDR plan</li>
+        <li>You're placed on a payment equal to what you'd owe under the <a href="/wiki/standard-repayment-plan">Standard 10-year Plan</a> (or a 10-year amortization of your current balance, whichever is higher)</li>
+        <li>Any unpaid interest on your loan <a href="/wiki/capitalized-interest">capitalizes</a> into your principal balance</li>
+        <li>You can lose progress toward <a href="/wiki/pslf">PSLF</a> for the months you spend off-plan</li>
+      </ol>
+      <p>You can re-apply for IDR at any time after missing the deadline, but the months between missing the deadline and re-applying generally won't count toward forgiveness.</p>
+      <h2>How to make it painless</h2>
+      <p>Set a calendar reminder 30 days before your deadline. File electronically through studentaid.gov — paper applications can get lost. Use IRS Data Retrieval where available to pull your AGI automatically. Re-certifying when your income drops (lost a job, took a pay cut, gained a dependent) can lower your payment <em>before</em> the annual cycle, so don't wait for the deadline if your situation has changed.</p>
+    `,
+    related: ["income-driven-repayment", "save-plan", "capitalized-interest"],
+  },
+  {
+    slug: "loan-default-rehabilitation",
+    title: "Default & Loan Rehabilitation",
+    category: "process",
+    excerpt:
+      "What happens if your federal loans go into default, and the two main paths back to good standing: rehabilitation and consolidation.",
+    keywords: ["loan default", "loan rehabilitation", "default recovery"],
+    updated: "2026-05-01",
+    body: `
+      <p>Federal student loans go into "default" when you've gone 270 days without making a payment. The consequences are significant — but unlike most defaulted debt, federal student loans have clear, federally-defined paths back to good standing.</p>
+      <h2>What happens in default</h2>
+      <ul>
+        <li>The entire loan balance becomes due immediately (acceleration)</li>
+        <li>Your credit report shows the default, hurting your credit score significantly</li>
+        <li>Your federal tax refund can be intercepted (Treasury Offset Program)</li>
+        <li>Your wages can be garnished without a court order, up to 15% of disposable income</li>
+        <li>You lose eligibility for new federal student aid</li>
+        <li>You lose access to <a href="/wiki/income-driven-repayment">income-driven repayment plans</a>, deferment, and forbearance until you cure the default</li>
+      </ul>
+      <h2>Path 1: Loan Rehabilitation</h2>
+      <p>You make 9 voluntary monthly payments within 10 months at an amount the Department of Education agrees is "reasonable and affordable" — often as low as $5 per month. After the 9 payments, your loan is removed from default and the default notation is removed from your credit report (though late payments leading up to the default remain). Rehabilitation can only be used once per loan.</p>
+      <h2>Path 2: Loan Consolidation</h2>
+      <p>You consolidate the defaulted loan into a Direct Consolidation Loan. To do this, you generally need to agree to an income-driven repayment plan on the new consolidation loan, or make three on-time monthly payments on the defaulted loan before consolidating. Consolidation is faster than rehabilitation, but the default <em>stays</em> on your credit report (you've paid it off via the new loan, but the original default history remains).</p>
+      <h2>Which path is right</h2>
+      <p>Rehabilitation is generally better for your credit because it removes the default notation. Consolidation is faster and better if you need to access IDR or PSLF quickly. Talk to a strategist before choosing — the right answer depends on your goals, timeline, and the kind of loans you have.</p>
+      <h2>What to avoid</h2>
+      <p>Be wary of any company that offers to "settle" your federal student loan default for pennies on the dollar. Federal student loans rarely settle for less than principal plus interest plus collection fees — and the marketing claims you'll see online are almost always exaggerations of what's actually possible.</p>
+    `,
+    related: ["loan-consolidation", "income-driven-repayment", "pslf"],
+  },
+  {
+    slug: "federal-loan-refinancing",
+    title: "Refinancing Federal Student Loans",
+    category: "process",
+    excerpt:
+      "Refinancing replaces your federal loans with a new private loan at a (hopefully) lower rate. Often a mistake — you give up every federal benefit forever.",
+    keywords: ["refinance student loans", "private refinancing", "SoFi", "Earnest"],
+    updated: "2026-05-01",
+    body: `
+      <p>"Refinancing" your federal student loans means taking out a new private loan, using it to pay off your existing federal loans, and then making payments on the new private loan instead. It's not the same as <a href="/wiki/loan-consolidation">federal consolidation</a> — refinancing converts federal debt into private debt, with all the trade-offs that come with it.</p>
+      <h2>What you might gain</h2>
+      <ul>
+        <li>A lower interest rate (if your credit qualifies)</li>
+        <li>A single monthly payment instead of several</li>
+        <li>Sometimes a shorter or longer term, depending on your goals</li>
+      </ul>
+      <h2>What you give up — forever</h2>
+      <p>Once you refinance, your loans are no longer federal. You permanently lose:</p>
+      <ul>
+        <li>Eligibility for every <a href="/wiki/income-driven-repayment">income-driven repayment plan</a> (SAVE, PAYE, IBR, ICR)</li>
+        <li>Eligibility for <a href="/wiki/pslf">Public Service Loan Forgiveness</a></li>
+        <li>Eligibility for <a href="/wiki/borrowers-defense">Borrower's Defense</a> and <a href="/wiki/tpd-discharge">TPD discharge</a></li>
+        <li>Federal deferment and forbearance protections</li>
+        <li>The interest subsidy on Subsidized loans during qualifying periods</li>
+        <li>Generous in-default rehabilitation options</li>
+      </ul>
+      <p>These benefits don't come back. You can't "un-refinance" if your situation changes later — your loan is permanently a private loan.</p>
+      <h2>When refinancing makes sense</h2>
+      <p>Refinancing is usually only the right move when <em>all</em> of these are true: you have strong credit and stable income; you're not pursuing (and won't pursue) PSLF; you don't expect your income to drop in the foreseeable future; you have <a href="/wiki/federal-vs-private">private loans</a> mixed in that you'd also be refinancing; and the rate savings are substantial (at least 1.5 percentage points or so).</p>
+      <h2>When refinancing is a trap</h2>
+      <p>The companies that advertise refinancing aggressively often work with borrowers who would be financially better off on <a href="/wiki/save-plan">SAVE</a> or PSLF. The "save $20,000 over the life of your loan" math in the ad rarely accounts for what you lose by giving up federal protections. Run the comparison before signing.</p>
+    `,
+    related: ["loan-consolidation", "federal-vs-private", "pslf"],
+  },
+  {
+    slug: "pslf-buyback",
+    title: "PSLF Buyback",
+    category: "forgiveness",
+    excerpt:
+      "A newer process that lets you 'buy back' qualifying PSLF months for periods of forbearance or deferment that didn't originally count.",
+    keywords: ["PSLF buyback", "buy back qualifying payments", "PSLF months"],
+    updated: "2026-05-01",
+    body: `
+      <p>PSLF Buyback is a relatively new process that lets you "buy back" qualifying <a href="/wiki/pslf">PSLF</a> months for past periods of forbearance or deferment that wouldn't have counted under normal rules. It's narrow, useful, and not well understood.</p>
+      <h2>What it does</h2>
+      <p>Normally, months spent in <a href="/wiki/forbearance-vs-deferment">forbearance or deferment</a> don't count toward the 120 qualifying payments you need for PSLF. The buyback option lets you pay the Department of Education a one-time amount equal to what you would have paid under an income-driven plan during those months, in exchange for those months counting toward your PSLF total.</p>
+      <h2>Who qualifies for the buyback option</h2>
+      <ul>
+        <li>You must have at least 120 months of qualifying employment at PSLF-qualifying employers</li>
+        <li>You must already have an approved PSLF application or be close to one</li>
+        <li>The months you want to buy back must be months you spent in forbearance or deferment</li>
+        <li>The buyback only matters if buying back the months would push you to (or past) 120 qualifying payments</li>
+      </ul>
+      <h2>What it costs</h2>
+      <p>The buyback amount is calculated based on what your monthly payment would have been under SAVE, PAYE, or IBR during those forbearance/deferment months, given your income at the time. For many low-income periods, the buyback can be surprisingly cheap — sometimes only a few hundred dollars to recover a year of qualifying credit.</p>
+      <h2>How to do it</h2>
+      <p>You request a buyback after your PSLF application has been processed and the Department has identified how many qualifying months you have. They'll send you a buyback offer in writing showing the amount, the months you'd recover, and the deadline to accept.</p>
+      <h2>The strategist's view</h2>
+      <p>Buyback is one of the more valuable tools to land in federal student aid in recent years, but the math only works for a narrow set of borrowers. Don't pre-emptively pay for months you might not need; wait until your PSLF certification is processed and you know exactly where you stand.</p>
+    `,
+    related: ["pslf", "forbearance-vs-deferment", "income-driven-repayment"],
+  },
+  {
+    slug: "parent-plus-loans",
+    title: "Parent PLUS Loans",
+    category: "loan-types",
+    excerpt:
+      "Federal loans taken out by a parent to pay for a dependent undergraduate's education. Higher interest rates than most other federal loans and limited repayment options.",
+    keywords: ["Parent PLUS", "PLUS loans", "parent borrowing"],
+    updated: "2026-05-01",
+    body: `
+      <p>Parent PLUS Loans are federal <a href="/wiki/direct-loans">Direct Loans</a> taken out by a parent (not the student) to pay for the parent's dependent undergraduate's education. The parent is legally responsible for the loan, regardless of what the student does after graduation.</p>
+      <h2>Key features</h2>
+      <ul>
+        <li><strong>Borrower:</strong> The parent. The student has no legal obligation to repay.</li>
+        <li><strong>Amount:</strong> Up to the cost of attendance minus other financial aid received.</li>
+        <li><strong>Credit check:</strong> Yes, but it's mainly looking for adverse credit history. Income and credit score don't directly affect eligibility for most parents.</li>
+        <li><strong>Interest rate:</strong> Fixed, set annually. Historically higher than Direct Subsidized/Unsubsidized rates.</li>
+        <li><strong>Origination fee:</strong> Higher than other Direct Loans (roughly 4% as of recent years).</li>
+      </ul>
+      <h2>The big limitation: repayment options</h2>
+      <p>Parent PLUS loans aren't directly eligible for <a href="/wiki/save-plan">SAVE</a>, <a href="/wiki/paye-plan">PAYE</a>, or new-borrower <a href="/wiki/ibr-plan">IBR</a>. The only income-driven plan they're eligible for is <a href="/wiki/icr-plan">ICR</a>, which uses a higher rate (20% of discretionary) and a stricter formula. To qualify even for ICR, the Parent PLUS must first be <a href="/wiki/loan-consolidation">consolidated</a> into a Direct Consolidation Loan.</p>
+      <h2>PSLF path for Parent PLUS</h2>
+      <p>Parent PLUS borrowers <em>can</em> pursue <a href="/wiki/pslf">PSLF</a>, but only after:</p>
+      <ol>
+        <li>Consolidating their Parent PLUS into a Direct Consolidation Loan</li>
+        <li>Enrolling in ICR (the only IDR plan available to consolidated Parent PLUS)</li>
+        <li>Working full-time at a qualifying employer</li>
+      </ol>
+      <p>It's a viable strategy for parents in qualifying employment — but the timing and order matter.</p>
+      <h2>Double-consolidation strategy (limited)</h2>
+      <p>For a period before mid-2025, borrowers used a "double-consolidation" strategy to access better IDR plans for Parent PLUS loans. That loophole has been closed for new consolidations. Existing borrowers who completed the double-consolidation before the deadline keep their position.</p>
+      <h2>Who carries the debt</h2>
+      <p>Parent PLUS is legally the parent's debt. It cannot be transferred to the student through any federal program. (Some private lenders offer "Parent PLUS refinance to student" programs — see <a href="/wiki/federal-loan-refinancing">refinancing</a>, with all the trade-offs that come with it.)</p>
+    `,
+    related: ["direct-loans", "icr-plan", "loan-consolidation", "pslf"],
+  },
 ];
 
 export function getWikiEntry(slug: string): WikiEntry | undefined {

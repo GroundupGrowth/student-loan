@@ -4,6 +4,7 @@ import { ChevronRight, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { CtaBand } from "@/components/site/cta-band";
 import { FaqAccordion } from "@/components/site/faq-accordion";
+import { LearnTheSystem } from "@/components/site/learn-the-system";
 import { PlaceholderImage } from "@/components/site/placeholder-image";
 import { faqs } from "@/lib/content/faqs";
 import type { Service } from "@/lib/content/services";
@@ -158,6 +159,8 @@ export function ServicePage({ service }: { service: Service }) {
           </div>
         </div>
       </section>
+
+      <LearnTheSystem surface="cream" />
 
       <CtaBand />
     </>

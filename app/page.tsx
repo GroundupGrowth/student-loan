@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { BlogCard } from "@/components/site/blog-card";
 import { CtaBand } from "@/components/site/cta-band";
+import { LearnTheSystem } from "@/components/site/learn-the-system";
 import { NumberedCircle } from "@/components/site/numbered-circle";
 import { ServiceDeepDive } from "@/components/site/service-deep-dive";
 import { StatsStrip } from "@/components/site/stats-strip";
@@ -246,8 +247,11 @@ export default function HomePage() {
         surface="white"
       />
 
+      {/* 5b. Learn the system (wiki teaser) */}
+      <LearnTheSystem surface="cream" />
+
       {/* 6. Meet the Team */}
-      <section className="section bg-[var(--surface-deep)]">
+      <section className="section bg-[var(--surface)]">
         <div className="container max-w-content">
           <div className="mx-auto max-w-3xl text-center">
             <StickerTag>The team</StickerTag>
@@ -269,7 +273,7 @@ export default function HomePage() {
       </section>
 
       {/* 7. Why choose us */}
-      <section className="section bg-[var(--surface)]">
+      <section className="section bg-[var(--surface-deep)]">
         <div className="container max-w-content">
           <div className="mx-auto max-w-3xl text-center">
             <StickerTag>Why ClearPath</StickerTag>
