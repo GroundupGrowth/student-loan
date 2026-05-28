@@ -5,7 +5,7 @@ import { services } from "@/lib/content/services";
 import { wikiEntries } from "@/lib/content/wiki";
 
 const baseUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ?? "https://clearpathfinancialfreedom.com";
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.studentloanclarity.com";
 
 /**
  * Sitemap generator. Run automatically by Next.js on every build and served

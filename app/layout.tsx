@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   // PLACEHOLDER — set NEXT_PUBLIC_SITE_URL or replace the fallback URL before
   // launch so social-share previews resolve absolute URLs correctly.
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL ?? "https://clearpathfinancialfreedom.com",
+    process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.studentloanclarity.com",
   ),
   title: {
     default: `${SITE_NAME} — ${SITE_TAGLINE}`,
