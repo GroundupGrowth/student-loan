@@ -6,6 +6,7 @@ const service = getService("student-loan-relief")!;
 export const metadata = {
   title: service.outcomeHeadline,
   description: service.outcomeSub,
+  alternates: { canonical: `/services/${service.slug}` },
 };
 
 export default function StudentLoanReliefPage() {

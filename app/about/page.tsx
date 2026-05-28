@@ -12,6 +12,7 @@ export const metadata = {
   title: "About ClearPath",
   description:
     "ClearPath is a U.S. federal student loan consulting firm. We pull your full loan record, model every program you qualify for, and handle the paperwork — so you stop guessing.",
+  alternates: { canonical: "/about" },
 };
 
 const values = [

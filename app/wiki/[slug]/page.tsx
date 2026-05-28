@@ -4,6 +4,7 @@ import { ArrowLeft, ChevronRight } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
 import { CtaBand } from "@/components/site/cta-band";
+import { JsonLd } from "@/components/site/json-ld";
 import { StickerTag } from "@/components/site/sticker-tag";
 import { WikiCard } from "@/components/site/wiki-card";
 import {
@@ -12,6 +13,7 @@ import {
   wikiCategories,
   wikiEntries,
 } from "@/lib/content/wiki";
+import { articleSchema, breadcrumbSchema } from "@/lib/seo";
 
 type Params = { slug: string };
 
@@ -26,6 +28,13 @@ export function generateMetadata({ params }: { params: Params }) {
     title: `${entry.title} — Wiki`,
     description: entry.excerpt,
     keywords: entry.keywords,
+    alternates: { canonical: `/wiki/${entry.slug}` },
+    openGraph: {
+      type: "article",
+      title: entry.title,
+      description: entry.excerpt,
+      modifiedTime: entry.updated,
+    },
   };
 }
 
@@ -38,6 +47,22 @@ export default function WikiEntryPage({ params }: { params: Params }) {
 
   return (
     <>
+      <JsonLd
+        data={articleSchema({
+          url: `/wiki/${entry.slug}`,
+          headline: entry.title,
+          description: entry.excerpt,
+          datePublished: entry.updated,
+          dateModified: entry.updated,
+        })}
+      />
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Home", url: "/" },
+          { name: "Wiki", url: "/wiki" },
+          { name: entry.shortTitle ?? entry.title, url: `/wiki/${entry.slug}` },
+        ])}
+      />
       <article className="bg-[var(--surface)] pt-10 pb-16 md:pt-16 md:pb-24">
         <div className="container max-w-content">
           {/* Breadcrumb */}

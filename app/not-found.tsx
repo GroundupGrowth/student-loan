@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 
 export const metadata = {
   title: "Page not found",
+  robots: { index: false, follow: true },
 };
 
 export default function NotFound() {

@@ -5,7 +5,8 @@ import { CALENDLY_URL, PHONE, PHONE_DISPLAY } from "@/lib/config";
 export const metadata = {
   title: "Book your free consultation",
   description:
-    "Book a free 30-minute consultation with a licensed ClearPath strategist. Walk away with a clear next step for your student loans, credit, and long-term plan.",
+    "Book a free 30-minute consultation with a licensed ClearPath strategist. Walk away with a clear next step for your federal student loans.",
+  alternates: { canonical: "/book-a-consultation" },
 };
 
 const expectations = [

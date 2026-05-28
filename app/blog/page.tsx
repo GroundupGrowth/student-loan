@@ -3,9 +3,10 @@ import { CtaBand } from "@/components/site/cta-band";
 import { blogPosts } from "@/lib/content/blog-posts";
 
 export const metadata = {
-  title: "Insights on debt, credit, and building wealth",
+  title: "Insights on federal student loans",
   description:
-    "Plain-English writing on student loan strategy, credit repair, Infinite Banking, and tax planning, from the ClearPath team.",
+    "Plain-English writing on income-driven repayment, PSLF, Borrower's Defense, and the federal student loan rulebook — from the ClearPath team.",
+  alternates: { canonical: "/blog" },
 };
 
 export default function BlogIndexPage() {
@@ -16,11 +17,12 @@ export default function BlogIndexPage() {
           <div className="mx-auto max-w-3xl text-center">
             <span className="eyebrow">Blog</span>
             <h1 className="mt-4 text-balance">
-              Insights on debt, credit, and building wealth.
+              Insights on federal student loans.
             </h1>
             <p className="mt-5 text-body text-[var(--slate)]">
-              The kind of finance writing we wish existed when we started — no
-              hype, no jargon, no affiliate links to questionable products.
+              The kind of student-loan writing we wish existed when we started
+              — no hype, no jargon, no affiliate links to questionable
+              refinance products.
             </p>
           </div>
 

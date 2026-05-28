@@ -4,16 +4,26 @@ import { ChevronRight, Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { CtaBand } from "@/components/site/cta-band";
 import { FaqAccordion } from "@/components/site/faq-accordion";
+import { JsonLd } from "@/components/site/json-ld";
 import { LearnTheSystem } from "@/components/site/learn-the-system";
 import { PlaceholderImage } from "@/components/site/placeholder-image";
 import { faqs } from "@/lib/content/faqs";
 import type { Service } from "@/lib/content/services";
+import { breadcrumbSchema, faqSchema } from "@/lib/seo";
 
 export function ServicePage({ service }: { service: Service }) {
   const serviceFaqs = faqs[service.key];
 
   return (
     <>
+      <JsonLd data={faqSchema(serviceFaqs)} />
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Home", url: "/" },
+          { name: "Services", url: "/" },
+          { name: service.name, url: `/services/${service.slug}` },
+        ])}
+      />
       {/* Hero */}
       <section className="section">
         <div className="container max-w-content">

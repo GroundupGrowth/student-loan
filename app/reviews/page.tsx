@@ -10,7 +10,8 @@ import { allReviews } from "@/lib/content/testimonials";
 export const metadata = {
   title: "What our clients say",
   description:
-    "Real client reviews of ClearPath Financial Freedom. Stories from people who lowered their student loan payments, cleaned up their credit, and built a real plan.",
+    "Client reviews of ClearPath. Stories from federal student loan borrowers who lowered their payments, qualified for forgiveness, or got a real plan for the first time.",
+  alternates: { canonical: "/reviews" },
 };
 
 export default function ReviewsPage() {

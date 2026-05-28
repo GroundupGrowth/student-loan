@@ -14,6 +14,7 @@ export const metadata = {
   title: "Contact us",
   description:
     "Reach the ClearPath team by phone, email, or message. We respond to every inquiry within one business day.",
+  alternates: { canonical: "/contact" },
 };
 
 export default function ContactPage() {

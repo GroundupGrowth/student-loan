@@ -33,6 +33,7 @@ export const metadata = {
   title: "Federal student loans, finally explained.",
   description:
     "A licensed strategist reviews your federal student loans, models every repayment plan you qualify for, and handles the paperwork. No call centers. No scripts. No pressure.",
+  alternates: { canonical: "/" },
 };
 
 const painPoints = [

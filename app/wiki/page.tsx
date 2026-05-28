@@ -13,6 +13,7 @@ export const metadata = {
   title: "Student loan wiki — plans, programs, and key terms",
   description:
     "Plain-English explainers for every federal student loan program, repayment plan, and term you'll encounter. IDR plans, PSLF, Borrower's Defense, NSLDS, and more.",
+  alternates: { canonical: "/wiki" },
 };
 
 export default function WikiIndexPage() {

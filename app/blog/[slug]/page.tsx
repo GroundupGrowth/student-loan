@@ -4,12 +4,13 @@ import { ArrowLeft } from "lucide-react";
 
 import { BlogCard } from "@/components/site/blog-card";
 import { CtaBand } from "@/components/site/cta-band";
+import { JsonLd } from "@/components/site/json-ld";
 import { PlaceholderImage } from "@/components/site/placeholder-image";
 import { blogPosts, getPost } from "@/lib/content/blog-posts";
+import { articleSchema, breadcrumbSchema } from "@/lib/seo";
 
 type Params = { slug: string };
 
-// Required for `output: 'export'` static export.
 export function generateStaticParams(): Params[] {
   return blogPosts.map((p) => ({ slug: p.slug }));
 }
@@ -20,6 +21,15 @@ export function generateMetadata({ params }: { params: Params }) {
   return {
     title: post.title,
     description: post.excerpt,
+    alternates: { canonical: `/blog/${post.slug}` },
+    openGraph: {
+      type: "article",
+      title: post.title,
+      description: post.excerpt,
+      publishedTime: post.date,
+      authors: [post.author],
+      images: post.image ? [{ url: post.image, alt: post.title }] : undefined,
+    },
   };
 }
 
@@ -31,6 +41,23 @@ export default function BlogPostPage({ params }: { params: Params }) {
 
   return (
     <>
+      <JsonLd
+        data={articleSchema({
+          url: `/blog/${post.slug}`,
+          headline: post.title,
+          description: post.excerpt,
+          datePublished: post.date,
+          author: post.author,
+          image: post.image,
+        })}
+      />
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Home", url: "/" },
+          { name: "Blog", url: "/blog" },
+          { name: post.title, url: `/blog/${post.slug}` },
+        ])}
+      />
       <article className="section">
         <div className="container max-w-content">
           <Link

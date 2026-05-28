@@ -10,6 +10,7 @@ export const metadata = {
   title: "Student loan payment calculator",
   description:
     "Compare your monthly payment under the Standard, SAVE, PAYE, and IBR federal student loan plans. Free, no signup, takes 30 seconds.",
+  alternates: { canonical: "/calculator" },
 };
 
 export default function CalculatorPage() {
