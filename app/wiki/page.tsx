@@ -40,22 +40,26 @@ export default function WikiIndexPage() {
         </div>
       </section>
 
-      {wikiCategories.map((cat) => {
+      {wikiCategories.map((cat, i) => {
         const entries = getEntriesByCategory(cat.key);
         if (entries.length === 0) return null;
+        const isCream = i % 2 === 1;
         return (
           <section
             key={cat.key}
-            className="bg-[var(--surface)] pb-16 md:pb-20 last:bg-[var(--surface-deep)] last:pb-20 last:pt-20 md:last:pt-24 md:last:pb-28 odd:bg-[var(--surface-deep)] odd:py-16 md:odd:py-20"
+            className={
+              "section " +
+              (isCream
+                ? "bg-[var(--surface-deep)]"
+                : "bg-[var(--surface)]")
+            }
           >
             <div className="container max-w-content">
               <div className="mx-auto max-w-3xl">
-                <h2 className="text-[26px] md:text-[32px]">{cat.title}</h2>
-                <p className="mt-3 text-[16px] leading-relaxed text-[var(--ink-soft)]">
-                  {cat.description}
-                </p>
+                <h2 className="text-[28px] md:text-[34px]">{cat.title}</h2>
+                <p className="mt-4 text-lead">{cat.description}</p>
               </div>
-              <div className="mx-auto mt-8 grid max-w-5xl gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              <div className="mx-auto mt-12 grid max-w-5xl gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 {entries.map((entry) => (
                   <WikiCard key={entry.slug} entry={entry} />
                 ))}
